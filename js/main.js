@@ -278,6 +278,37 @@ galleryModal.addEventListener('touchend', e => {
   if (Math.abs(dx) > 40) galleryGoTo(dx < 0 ? 1 : -1);
 }, { passive: true });
 
+// ── Gallery carousel ──────────────────────────────────────────────────────────
+function initGalleryCarousel() {
+  const track   = document.getElementById('gc-track');
+  const prevBtn = document.getElementById('gc-prev');
+  const nextBtn = document.getElementById('gc-next');
+  if (!track || !prevBtn || !nextBtn) return;
+
+  const thumbs = Array.from(track.querySelectorAll('.gallery-thumb'));
+  let current = 0;
+
+  function getVisible() {
+    if (window.innerWidth <= 580) return 1;
+    if (window.innerWidth <= 960) return 2;
+    return 3;
+  }
+
+  function update() {
+    const thumb = thumbs[0];
+    const gap = 12;
+    const offset = current * (thumb.offsetWidth + gap);
+    track.style.transform = `translateX(-${offset}px)`;
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current >= thumbs.length - getVisible();
+  }
+
+  prevBtn.addEventListener('click', () => { current--; update(); });
+  nextBtn.addEventListener('click', () => { current++; update(); });
+  window.addEventListener('resize', () => { current = 0; update(); });
+  update();
+}
+
 // ── Smooth scroll for anchor links ────────────────────────────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
@@ -300,4 +331,5 @@ document.addEventListener('DOMContentLoaded', () => {
   submitBtn.disabled = true;
   initReveal();
   initPricingTabs();
+  initGalleryCarousel();
 });

@@ -525,15 +525,21 @@
   <h2 class="sec-h2" data-i18n="gallery_title">Результаты говорят сами за себя</h2>
   <p class="sec-sub" data-i18n="gallery_sub">Фотографии клиентов — до и после уборки</p>
 
-  <div class="gallery-grid">
-    <div class="gallery-thumb" onclick="openGallery(0)"><img src="assets/gallery/work-01.jpg" alt="До и после 1" loading="lazy" /></div>
-    <div class="gallery-thumb" onclick="openGallery(1)"><img src="assets/gallery/work-02.jpg" alt="До и после 2" loading="lazy" /></div>
-    <div class="gallery-thumb" onclick="openGallery(2)"><img src="assets/gallery/work-03.jpg" alt="До и после 3" loading="lazy" /></div>
-    <div class="gallery-thumb" onclick="openGallery(3)"><img src="assets/gallery/work-04.jpg" alt="До и после 4" loading="lazy" /></div>
-    <div class="gallery-thumb" onclick="openGallery(4)"><img src="assets/gallery/work-05.jpg" alt="До и после 5" loading="lazy" /></div>
-    <div class="gallery-thumb" onclick="openGallery(5)"><img src="assets/gallery/work-06.jpg" alt="До и после 6" loading="lazy" /></div>
-    <div class="gallery-thumb" onclick="openGallery(6)"><img src="assets/gallery/work-07.jpg" alt="До и после 7" loading="lazy" /></div>
-    <div class="gallery-thumb" onclick="openGallery(7)"><img src="assets/gallery/work-08.jpg" alt="До и после 8" loading="lazy" /></div>
+  <div class="gallery-carousel">
+    <button class="gc-btn gc-prev" id="gc-prev" aria-label="Предыдущие">‹</button>
+    <div class="gc-viewport">
+      <div class="gc-track" id="gc-track">
+        <div class="gallery-thumb" onclick="openGallery(0)"><img src="assets/gallery/work-01.jpg" alt="До и после 1" loading="lazy" /></div>
+        <div class="gallery-thumb" onclick="openGallery(1)"><img src="assets/gallery/work-02.jpg" alt="До и после 2" loading="lazy" /></div>
+        <div class="gallery-thumb" onclick="openGallery(2)"><img src="assets/gallery/work-03.jpg" alt="До и после 3" loading="lazy" /></div>
+        <div class="gallery-thumb" onclick="openGallery(3)"><img src="assets/gallery/work-04.jpg" alt="До и после 4" loading="lazy" /></div>
+        <div class="gallery-thumb" onclick="openGallery(4)"><img src="assets/gallery/work-05.jpg" alt="До и после 5" loading="lazy" /></div>
+        <div class="gallery-thumb" onclick="openGallery(5)"><img src="assets/gallery/work-06.jpg" alt="До и после 6" loading="lazy" /></div>
+        <div class="gallery-thumb" onclick="openGallery(6)"><img src="assets/gallery/work-07.jpg" alt="До и после 7" loading="lazy" /></div>
+        <div class="gallery-thumb" onclick="openGallery(7)"><img src="assets/gallery/work-08.jpg" alt="До и после 8" loading="lazy" /></div>
+      </div>
+    </div>
+    <button class="gc-btn gc-next" id="gc-next" aria-label="Следующие">›</button>
   </div>
 
   <div class="gallery-cta">
@@ -598,50 +604,6 @@
     </div>
   </div>
 
-  <div class="contact-form-col appear">
-    <form id="contact-form-quick" class="form-wrap" novalidate>
-      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-      <div class="f-row">
-        <div class="f-group">
-          <label class="f-label" for="q-name" data-i18n="modal_name_label">Ваше имя</label>
-          <input class="f-input" id="q-name" type="text" name="name" data-i18n-placeholder="modal_name_placeholder" placeholder="Имя" />
-        </div>
-        <div class="f-group">
-          <label class="f-label" for="q-phone" data-i18n="modal_phone_label">Телефон</label>
-          <input class="f-input" id="q-phone" type="tel" name="phone" data-i18n-placeholder="modal_phone_placeholder" placeholder="+381 ..." />
-        </div>
-      </div>
-      <div class="f-group">
-        <label class="f-label" for="q-type" data-i18n="modal_type_label">Вид уборки</label>
-        <div class="f-select-wrap">
-          <select class="f-select" id="q-type" name="cleaning_type">
-            <option value="" disabled selected data-i18n="modal_type_placeholder">Выберите...</option>
-            <option value="basic" data-i18n="modal_type_basic">Базовая уборка</option>
-            <option value="deep" data-i18n="modal_type_deep">Генеральная уборка</option>
-            <option value="reno" data-i18n="modal_type_reno">После ремонта</option>
-            <option value="dry" data-i18n="dry_title_short">Химчистка</option>
-            <option value="windows" data-i18n="svc_windows_title">Мытьё окон</option>
-          </select>
-        </div>
-      </div>
-      <div class="f-group">
-        <label class="f-label" data-i18n="modal_contact_label">Способ связи</label>
-        <div class="f-methods">
-          <div class="f-method active" data-method="telegram" onclick="pickMethod(this)">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.69-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.25.38-.51 1.07-.78 4.19-1.82 6.98-3.02 8.38-3.61 3.99-1.66 4.82-1.95 5.36-1.96.12 0 .38.03.55.17.14.12.18.28.2.4-.02.06-.02.13-.03.2z"/></svg>
-            Telegram
-          </div>
-          <div class="f-method" data-method="email" onclick="pickMethod(this)">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-            Email
-          </div>
-        </div>
-      </div>
-      <button type="submit" class="f-submit">
-        <span data-i18n="modal_submit">Отправить заявку</span> →
-      </button>
-    </form>
-  </div>
 </section>
 
 <!-- ═══════════════════════════════════ FOOTER ════════════════════════════════════ -->
