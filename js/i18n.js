@@ -253,6 +253,20 @@ const translations = {
     modal_desc: 'Свяжемся в течение 30 минут в рабочее время.',
     modal_type_placeholder: 'Выберите...',
     footer_tagline: 'Профессиональный клининговый сервис в Белграде. Работаем с 2023 года.',
+
+    // Steps / How we work
+    steps_tag: 'Как мы работаем',
+    steps_intro_h: 'Просто и',
+    steps_intro_em: 'прозрачно',
+    steps_intro_sub: 'От заявки до сияющего дома — 4 шага',
+    steps_1_title: 'Оставьте заявку',
+    steps_1_desc: 'Заполните форму или напишите в Telegram — ответим в течение 30 минут в рабочее время.',
+    steps_2_title: 'Обсуждаем детали',
+    steps_2_desc: 'Уточняем объём, время и цену. Без скрытых доплат — всё прозрачно заранее.',
+    steps_3_title: 'Приезжаем и убираем',
+    steps_3_desc: 'Профессиональная команда со своим инвентарём и средствами. Аккуратно и точно в срок.',
+    steps_4_title: 'Получаете результат',
+    steps_4_desc: 'Проверяете качество и оплачиваете, когда довольны. Ваш дом — идеально чистый.',
   },
 
   sr: {
@@ -492,6 +506,20 @@ const translations = {
     modal_desc: 'Kontaktiraćemo vas u roku od 30 minuta u radnom vremenu.',
     modal_type_placeholder: 'Izaberite...',
     footer_tagline: 'Profesionalni klining servis u Beogradu. Radimo od 2023. godine.',
+
+    // Steps / How we work
+    steps_tag: 'Kako radimo',
+    steps_intro_h: 'Jednostavno i',
+    steps_intro_em: 'transparentno',
+    steps_intro_sub: 'Od upita do sjajnog doma — 4 koraka',
+    steps_1_title: 'Pošaljite upit',
+    steps_1_desc: 'Popunite formu ili pišite na Telegram — odgovaramo u roku od 30 minuta u radnom vremenu.',
+    steps_2_title: 'Dogovaramo detalje',
+    steps_2_desc: 'Preciziramo obim, vreme i cenu. Bez skrivenih doplataka — sve jasno unapred.',
+    steps_3_title: 'Dolazimo i čistimo',
+    steps_3_desc: 'Profesionalni tim sa sopstvenim inventarom i sredstvima. Pažljivo i tačno na vreme.',
+    steps_4_title: 'Primate rezultat',
+    steps_4_desc: 'Proveravate kvalitet i plaćate kad ste zadovoljni. Vaš dom — savršeno čist.',
   },
 
   en: {
@@ -731,6 +759,20 @@ const translations = {
     modal_desc: 'We will contact you within 30 minutes during working hours.',
     modal_type_placeholder: 'Select...',
     footer_tagline: 'Professional cleaning service in Belgrade. Serving since 2023.',
+
+    // Steps / How we work
+    steps_tag: 'How we work',
+    steps_intro_h: 'Simple and',
+    steps_intro_em: 'transparent',
+    steps_intro_sub: 'From inquiry to a spotless home — 4 steps',
+    steps_1_title: 'Send a request',
+    steps_1_desc: 'Fill out the form or message us on Telegram — we respond within 30 minutes during working hours.',
+    steps_2_title: 'Discuss the details',
+    steps_2_desc: 'We clarify the scope, time and price. No hidden fees — everything clear upfront.',
+    steps_3_title: 'We come and clean',
+    steps_3_desc: 'Professional team with their own equipment and supplies. Careful, on time, every time.',
+    steps_4_title: 'You receive the result',
+    steps_4_desc: 'Check the quality and pay when satisfied. Your home — perfectly clean.',
   }
 };
 
