@@ -4,645 +4,797 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Clean Cleanom — Профессиональный клининг в Белграде</title>
-  <meta name="description" content="Clean Cleanom — профессиональная уборка квартир, офисов и химчистка мебели в Белграде. Базовая, генеральная уборка и уборка после ремонта." />
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png" />
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-  <link rel="manifest" href="site.webmanifest" />
+  <meta name="description" content="Профессиональный клининговый сервис в Белграде. Уборка квартир, домов и офисов. Химчистка мебели. Работаем с 2023 года.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<!-- ══════════════════════ HEADER -->
+<!-- ═══════════════════════════════════ HEADER ═══════════════════════════════════ -->
 <header id="header">
-  <div class="container header-inner">
-    <a href="#home" class="logo" aria-label="Clean Cleanom">
-      <img src="assets/logo.svg" alt="Clean Cleanom" />
-    </a>
+  <a href="/" class="nav-logo">
+    <img src="assets/logo.svg" alt="Clean Cleanom" height="40" />
+  </a>
 
-    <nav id="nav-menu">
-      <a class="nav-link" href="#home"       data-i18n="nav_home">Главная</a>
-      <a class="nav-link" href="#services"   data-i18n="nav_services">Услуги</a>
-      <a class="nav-link" href="#prices"     data-i18n="nav_prices">Цены</a>
-      <a class="nav-link" href="#dry"        data-i18n="nav_dry">Химчистка</a>
-      <a class="nav-link" href="#contacts"   data-i18n="nav_contacts">Контакты</a>
-    </nav>
+  <nav id="nav-menu" class="nav-center" role="navigation" aria-label="Main navigation">
+    <a href="#usluge" data-i18n="nav_services">Услуги</a>
+    <a href="#ceny" data-i18n="nav_prices">Цены</a>
+    <a href="#himchistka" data-i18n="nav_dry">Химчистка</a>
+    <a href="#galeria" data-i18n="nav_gallery">Работы</a>
+    <a href="#kontakty" data-i18n="nav_contacts">Контакты</a>
+  </nav>
 
-    <div class="header-right">
-      <div class="lang-switcher">
-        <button class="lang-btn active" data-lang="ru">RU</button>
-        <button class="lang-btn"        data-lang="sr">SR</button>
-        <button class="lang-btn"        data-lang="en">EN</button>
-      </div>
-      <button class="btn-header-book open-modal-btn" data-i18n="nav_book">Оставить заявку</button>
-      <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+  <div class="nav-right">
+    <div class="lang-pill">
+      <button class="lang-btn" data-lang="ru">RU</button>
+      <button class="lang-btn" data-lang="sr">SR</button>
+      <button class="lang-btn" data-lang="en">EN</button>
     </div>
+    <button class="btn-cta open-modal-btn" data-i18n="nav_book">Оставить заявку</button>
+    <button class="burger-btn" id="burger" aria-label="Меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
-<!-- ══════════════════════ HERO -->
-<section class="hero" id="home">
-  <!-- Background organic blobs -->
-  <div class="hero-blob blob   hero-blob--1"></div>
-  <div class="hero-blob blob-2 hero-blob--2"></div>
-  <div class="hero-blob blob   hero-blob--3"></div>
+<!-- ═══════════════════════════════════ HERO ═════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-top appear">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <span data-i18n="hero_badge_text">Белград · с 2023 года</span>
+      </div>
+      <h1 class="hero-h1">
+        <span data-i18n="hero_line1">Ваш дом</span><br>
+        <span data-i18n="hero_line2">заслуживает</span><br>
+        <em class="italic" data-i18n="hero_line3">настоящей чистоты.</em>
+      </h1>
+      <p class="hero-desc" data-i18n="hero_sub">Чистота, которой можно доверять. Работаем с 2023 года.</p>
+      <div class="hero-btns">
+        <button class="btn-sage open-modal-btn" data-i18n="hero_btn_book">Оставить заявку</button>
+        <a href="#ceny" class="btn-outline" data-i18n="hero_btn_prices">Посмотреть цены</a>
+      </div>
+    </div>
 
-  <!-- Leaf decorations -->
-  <svg class="hero-leaf-deco hero-leaf-deco--a" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
-    <path d="M100 20 C155 20,185 70,185 150 C185 230,155 280,100 280 C45 280,15 230,15 150 C15 70,45 20,100 20Z"/>
-    <path d="M100 60 C135 60,155 100,155 150 C155 200,135 240,100 240 C65 240,45 200,45 150 C45 100,65 60,100 60Z" style="opacity:0.4"/>
-  </svg>
-  <svg class="hero-leaf-deco hero-leaf-deco--b" viewBox="0 0 160 240" xmlns="http://www.w3.org/2000/svg">
-    <path d="M80 15 C124 15,148 60,148 120 C148 180,124 225,80 225 C36 225,12 180,12 120 C12 60,36 15,80 15Z"/>
-  </svg>
+    <div class="hero-img-wrap">
+      <img src="assets/hero.jpg" alt="Clean Cleanom — профессиональный клининг в Белграде" />
+    </div>
 
-  <div class="container">
-    <div class="hero-inner">
-      <!-- Text column -->
-      <div class="hero-text">
-        <span class="hero-badge">
-          <span class="dot"></span>
-          Beograd · с 2023
-        </span>
-        <h1 class="hero-title">
-          <span data-i18n="hero_line1">Ваш дом</span><br>
-          <em data-i18n="hero_line2">заслуживает</em><br>
-          <span data-i18n="hero_line3">настоящей чистоты.</span>
-        </h1>
-        <p class="hero-sub" data-i18n="hero_sub">
-          Чистота, которой можно доверять. Работаем с 2023 года.
-        </p>
-        <div class="hero-buttons">
-          <button class="btn-primary open-modal-btn" data-i18n="hero_btn_book">Оставить заявку</button>
-          <a class="btn-outline-sage" href="#prices" data-i18n="hero_btn_prices">Посмотреть цены</a>
+    <div class="hero-aside">
+      <div class="mini-stat">
+        <div class="mini-stat-num">2+</div>
+        <div class="mini-stat-label" data-i18n="stat_years">лет на рынке</div>
+      </div>
+      <div class="mini-stat">
+        <div class="mini-stat-num">500+</div>
+        <div class="mini-stat-label" data-i18n="stat_cleanings">уборок выполнено</div>
+      </div>
+      <div class="mini-stat">
+        <div class="mini-stat-num">3</div>
+        <div class="mini-stat-label" data-i18n="stat_langs">языка поддержки</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-strip">
+    <div class="hero-strip-item open-modal-btn">
+      <div class="strip-icon strip-green">🧹</div>
+      <div class="strip-info">
+        <div class="strip-name" data-i18n="svc_basic_title">Базовая уборка</div>
+        <div class="strip-price">от 6 000 дин</div>
+      </div>
+      <div class="strip-arrow">→</div>
+    </div>
+    <div class="hero-strip-item open-modal-btn">
+      <div class="strip-icon strip-rust">✨</div>
+      <div class="strip-info">
+        <div class="strip-name" data-i18n="svc_deep_title">Генеральная уборка</div>
+        <div class="strip-price">от 13 000 дин</div>
+      </div>
+      <div class="strip-arrow">→</div>
+    </div>
+    <div class="hero-strip-item open-modal-btn">
+      <div class="strip-icon strip-sand">🏗️</div>
+      <div class="strip-info">
+        <div class="strip-name" data-i18n="svc_reno_title">После ремонта</div>
+        <div class="strip-price">от 18 000 дин</div>
+      </div>
+      <div class="strip-arrow">→</div>
+    </div>
+    <div class="hero-strip-item open-modal-btn">
+      <div class="strip-icon strip-purple">🛋️</div>
+      <div class="strip-info">
+        <div class="strip-name" data-i18n="dry_title_short">Химчистка</div>
+        <div class="strip-price">от 2 000 дин</div>
+      </div>
+      <div class="strip-arrow">→</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ SERVICES ══════════════════════════════════ -->
+<section class="section" id="usluge">
+  <div class="tag" data-i18n="badge_services">Клининговые услуги</div>
+  <h2 class="sec-h2" data-i18n="services_title">Наши услуги</h2>
+  <p class="sec-sub" data-i18n="services_sub">Профессиональная уборка для вашего дома и бизнеса</p>
+
+  <div class="services-cards">
+    <div class="svc-card appear">
+      <div class="svc-card-header">
+        <div class="svc-emoji-wrap svc-a">🧹</div>
+        <span class="svc-num">01</span>
+      </div>
+      <div class="svc-name" data-i18n="svc_basic_title">Базовая уборка</div>
+      <ul class="svc-items">
+        <li data-i18n="svc_basic_1">Удаление пыли и загрязнений с поверхностей</li>
+        <li data-i18n="svc_basic_2">Сухая и влажная уборка полов</li>
+        <li data-i18n="svc_basic_3">Замена постельного белья</li>
+        <li data-i18n="svc_basic_4">Уборка санузлов</li>
+        <li data-i18n="svc_basic_6">Вынос мусора</li>
+      </ul>
+      <div class="svc-footer">
+        <div>
+          <span class="svc-from" data-i18n="from_price">от</span>
+          <span class="svc-price">6 000 дин</span>
+        </div>
+        <button class="svc-book open-modal-btn" aria-label="Записаться">→</button>
+      </div>
+    </div>
+
+    <div class="svc-card appear">
+      <div class="svc-card-header">
+        <div class="svc-emoji-wrap svc-b">✨</div>
+        <span class="svc-num">02</span>
+      </div>
+      <div class="svc-name" data-i18n="svc_deep_title">Генеральная уборка</div>
+      <ul class="svc-items">
+        <li data-i18n="svc_deep_1">Удаление пыли, паутины со всех поверхностей</li>
+        <li data-i18n="svc_deep_2">Очистка мебели, включая внутренние отделения</li>
+        <li data-i18n="svc_deep_6">Тщательная уборка санузлов, удаление плесени</li>
+        <li data-i18n="svc_deep_8">Мытьё окон</li>
+        <li data-i18n="svc_deep_9">Вынос мусора</li>
+      </ul>
+      <div class="svc-footer">
+        <div>
+          <span class="svc-from" data-i18n="from_price">от</span>
+          <span class="svc-price">13 000 дин</span>
+        </div>
+        <button class="svc-book open-modal-btn" aria-label="Записаться">→</button>
+      </div>
+    </div>
+
+    <div class="svc-card appear">
+      <div class="svc-card-header">
+        <div class="svc-emoji-wrap svc-c">🏗️</div>
+        <span class="svc-num">03</span>
+      </div>
+      <div class="svc-name" data-i18n="svc_reno_title">После ремонта</div>
+      <ul class="svc-items">
+        <li data-i18n="svc_reno_1">Очистка от строительной пыли всех поверхностей</li>
+        <li data-i18n="svc_reno_2">Сухая очистка стен и потолков</li>
+        <li data-i18n="svc_reno_5">Мытьё окон, очистка от краски</li>
+        <li data-i18n="svc_reno_6">Уборка санузлов и кухни</li>
+        <li data-i18n="svc_reno_7">Вынос некрупногабаритного мусора</li>
+      </ul>
+      <div class="svc-footer">
+        <div>
+          <span class="svc-from" data-i18n="from_price">от</span>
+          <span class="svc-price">18 000 дин</span>
+        </div>
+        <button class="svc-book open-modal-btn" aria-label="Записаться">→</button>
+      </div>
+    </div>
+
+    <div class="svc-card appear">
+      <div class="svc-card-header">
+        <div class="svc-emoji-wrap svc-d">🪟</div>
+        <span class="svc-num">04</span>
+      </div>
+      <div class="svc-name" data-i18n="svc_windows_title">Мытьё окон</div>
+      <ul class="svc-items">
+        <li data-i18n="svc_windows_1">Мытьё стёкол изнутри и снаружи</li>
+        <li data-i18n="svc_windows_2">Очистка рам и подоконников</li>
+        <li data-i18n="svc_windows_3">Удаление следов краски и клея</li>
+        <li data-i18n="svc_windows_4">Профессиональные средства без разводов</li>
+      </ul>
+      <div class="svc-footer">
+        <div>
+          <span class="svc-from" data-i18n="from_price">от</span>
+          <span class="svc-price">2 000 дин</span>
+        </div>
+        <button class="svc-book open-modal-btn" aria-label="Записаться">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ EXTRAS ════════════════════════════════════ -->
+<section class="extras-section">
+  <div class="tag" data-i18n="badge_add">Доп. опции</div>
+  <h2 class="sec-h2" data-i18n="add_title">Дополнительные услуги</h2>
+  <p class="sec-sub" data-i18n="add_sub">Необязательные дополнения к любому виду уборки</p>
+
+  <div class="extras-grid">
+    <div class="extra-card appear">
+      <div class="extra-icon">🏠</div>
+      <div class="extra-info">
+        <div class="extra-name" data-i18n="add_balcony">Уборка балконов и террас</div>
+        <div class="extra-note" data-i18n="add_balcony_note">Стоимость зависит от площади</div>
+      </div>
+      <div class="extra-price" data-i18n="add_price_1k">от 1 000 дин</div>
+    </div>
+    <div class="extra-card appear">
+      <div class="extra-icon">🪞</div>
+      <div class="extra-info">
+        <div class="extra-name" data-i18n="add_glass">Мытьё стеклянных ограждений</div>
+        <div class="extra-note" data-i18n="add_glass_note">Стоимость зависит от размера</div>
+      </div>
+      <div class="extra-price" data-i18n="add_price_1k">от 1 000 дин</div>
+    </div>
+    <div class="extra-card appear">
+      <div class="extra-icon">🍳</div>
+      <div class="extra-info">
+        <div class="extra-name" data-i18n="add_items">Предметная чистка (СВЧ, духовка, вытяжка)</div>
+        <div class="extra-note" data-i18n="add_items_note">Стоимость зависит от загрязнения</div>
+      </div>
+      <div class="extra-price" data-i18n="add_price_1k">от 1 000 дин</div>
+    </div>
+    <div class="extra-card appear">
+      <div class="extra-icon">👔</div>
+      <div class="extra-info">
+        <div class="extra-name" data-i18n="add_iron_personal">Глажка — личные вещи</div>
+        <div class="extra-note" data-i18n="add_iron_personal_note">До 10 вещей, далее 100 дин/шт</div>
+      </div>
+      <div class="extra-price" data-i18n="add_price_1k">от 1 000 дин</div>
+    </div>
+    <div class="extra-card appear">
+      <div class="extra-icon">🪡</div>
+      <div class="extra-info">
+        <div class="extra-name" data-i18n="add_iron_curtains">Глажка — шторы, тюли</div>
+        <div class="extra-note" data-i18n="add_iron_curtains_note">Зависит от материала и количества</div>
+      </div>
+      <div class="extra-price" data-i18n="add_price_2k">от 2 000 дин</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ FOR WHOM ══════════════════════════════════ -->
+<section class="for-whom">
+  <div class="tag" data-i18n="badge_who">Для кого мы</div>
+  <h2 class="sec-h2" data-i18n="who_title">Для кого мы работаем</h2>
+  <p class="sec-sub" data-i18n="who_sub">Уборка для всех типов помещений</p>
+
+  <div class="whom-grid">
+    <div class="whom-card whom-light appear">
+      <div class="whom-bg-text">01</div>
+      <div class="whom-tag" data-i18n="who_private_title">Для физических лиц</div>
+      <div class="whom-title" data-i18n="who_private_desc_short">Дом, который сияет чистотой</div>
+      <p class="whom-text" data-i18n="who_private_desc">Уборка квартир, домов и частных апартаментов. Разовая или регулярная по вашему расписанию.</p>
+      <button class="btn-sage open-modal-btn" data-i18n="hero_btn_book">Оставить заявку</button>
+    </div>
+    <div class="whom-card whom-dark appear">
+      <div class="whom-bg-text">02</div>
+      <div class="whom-tag" data-i18n="who_biz_title">Для бизнеса</div>
+      <div class="whom-title"><span data-i18n="who_biz_title_short">Коммерческие</span><br><em data-i18n="who_biz_title_short2">помещения</em></div>
+      <p class="whom-text" data-i18n="who_biz_desc">Уборка офисов, ресторанов, отелей и торговых площадей. Условия и цена — по договорённости.</p>
+      <a href="#kontakty" class="btn-ghost" data-i18n="who_biz_cta">Обсудить условия</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ PRICING ═══════════════════════════════════ -->
+<section class="pricing-section" id="ceny">
+  <div class="tag" data-i18n="badge_prices">Прозрачные цены</div>
+  <h2 class="sec-h2" data-i18n="prices_title">Цены на клининг</h2>
+  <p class="sec-sub" data-i18n="prices_pick">Выберите вид уборки</p>
+
+  <div class="pricing-layout">
+    <div class="pricing-sidebar">
+      <div class="pricing-menu">
+        <div class="price-menu-item active" data-tab="0">
+          <div class="price-menu-left">
+            <span class="price-menu-icon">🧹</span>
+            <span class="price-menu-name" data-i18n="svc_basic_title">Базовая уборка</span>
+          </div>
+          <span class="price-menu-from">от 6 000</span>
+        </div>
+        <div class="price-menu-item" data-tab="1">
+          <div class="price-menu-left">
+            <span class="price-menu-icon">✨</span>
+            <span class="price-menu-name" data-i18n="svc_deep_title">Генеральная уборка</span>
+          </div>
+          <span class="price-menu-from">от 13 000</span>
+        </div>
+        <div class="price-menu-item" data-tab="2">
+          <div class="price-menu-left">
+            <span class="price-menu-icon">🏗️</span>
+            <span class="price-menu-name" data-i18n="svc_reno_title">После ремонта</span>
+          </div>
+          <span class="price-menu-from">от 18 000</span>
+        </div>
+        <div class="price-menu-item" data-tab="3">
+          <div class="price-menu-left">
+            <span class="price-menu-icon">🪟</span>
+            <span class="price-menu-name" data-i18n="svc_windows_title">Мытьё окон</span>
+          </div>
+          <span class="price-menu-from">от 2 000</span>
         </div>
       </div>
+    </div>
 
-      <!-- Visual column -->
-      <div class="hero-visual">
-        <div class="hero-visual-blob">
-          <div class="hero-visual-inner">
-            <div class="hero-emoji-big">🌿</div>
-            <div class="hero-visual-text" data-i18n="hero_visual_text">Clean Cleanom</div>
-            <div class="hero-visual-sub">Beograd</div>
+    <div class="pricing-content">
+      <div class="pricing-card active" id="pc0">
+        <div class="pricing-card-header">
+          <div>
+            <div class="pc-title" data-i18n="svc_basic_title">Базовая уборка</div>
+            <div class="pc-sub" data-i18n="pc_sub_basic">Регулярное обслуживание пространства</div>
+          </div>
+          <div class="pc-price-big">
+            <span class="pc-from-label" data-i18n="pc_from_label">начиная от</span>
+            <span class="pc-amount">6 000 дин</span>
           </div>
         </div>
+        <div class="pricing-rows">
+          <div class="p-row"><span class="p-area" data-i18n="prices_row1">до 49 м²</span><span class="p-price">6 000 дин</span></div>
+          <div class="p-row"><span class="p-area" data-i18n="prices_row2">от 50 м²</span><span class="p-price">7 000 дин</span></div>
+          <div class="p-row"><span class="p-area" data-i18n="prices_row3">от 70 м²</span><span class="p-price">8 000 дин</span></div>
+          <div class="p-row"><span class="p-area" data-i18n="prices_row4">от 100 м²</span><span class="p-price">+500 / 10м²</span></div>
+        </div>
+      </div>
 
-        <!-- Floating chips -->
-        <div class="hero-chip hero-chip--1">🧹 <span data-i18n="svc_basic_title">Базовая уборка</span></div>
-        <div class="hero-chip hero-chip--2">✨ <span data-i18n="svc_deep_title">Генеральная</span></div>
-        <div class="hero-chip hero-chip--3">🛋️ <span data-i18n="nav_dry">Химчистка</span></div>
-        <div class="hero-chip hero-chip--4">🏗️ <span data-i18n="svc_reno_title">После ремонта</span></div>
+      <div class="pricing-card" id="pc1">
+        <div class="pricing-card-header">
+          <div>
+            <div class="pc-title" data-i18n="svc_deep_title">Генеральная уборка</div>
+            <div class="pc-sub" data-i18n="pc_sub_deep">Глубокая комплексная чистка</div>
+          </div>
+          <div class="pc-price-big">
+            <span class="pc-from-label" data-i18n="pc_from_label">начиная от</span>
+            <span class="pc-amount">13 000 дин</span>
+          </div>
+        </div>
+        <div class="pricing-rows">
+          <div class="p-row"><span class="p-area" data-i18n="prices_row1">до 49 м²</span><span class="p-price">13 000 дин</span></div>
+          <div class="p-row"><span class="p-area" data-i18n="prices_row2">от 50 м²</span><span class="p-price">15 000 дин</span></div>
+          <div class="p-row"><span class="p-area" data-i18n="prices_row3">от 70 м²</span><span class="p-price">17 000 дин</span></div>
+          <div class="p-row"><span class="p-area" data-i18n="prices_row4">от 100 м²</span><span class="p-price">+1 000 / 10м²</span></div>
+        </div>
+      </div>
+
+      <div class="pricing-card" id="pc2">
+        <div class="pricing-card-header">
+          <div>
+            <div class="pc-title" data-i18n="svc_reno_title">После ремонта</div>
+            <div class="pc-sub" data-i18n="pc_sub_reno">Уборка после строительных работ</div>
+          </div>
+          <div class="pc-price-big">
+            <span class="pc-from-label" data-i18n="pc_from_label">начиная от</span>
+            <span class="pc-amount">18 000 дин</span>
+          </div>
+        </div>
+        <div class="pricing-rows">
+          <div class="p-row"><span class="p-area" data-i18n="prices_row1">до 49 м²</span><span class="p-price">18 000 дин</span></div>
+          <div class="p-row"><span class="p-area" data-i18n="prices_row2">от 50 м²</span><span class="p-price">20 000 дин</span></div>
+          <div class="p-row"><span class="p-area" data-i18n="prices_row3">от 70 м²</span><span class="p-price">22 000 дин</span></div>
+          <div class="p-row"><span class="p-area" data-i18n="prices_row4">от 100 м²</span><span class="p-price">+1 000 / 10м²</span></div>
+        </div>
+      </div>
+
+      <div class="pricing-card" id="pc3">
+        <div class="pricing-card-header">
+          <div>
+            <div class="pc-title" data-i18n="svc_windows_title">Мытьё окон</div>
+            <div class="pc-sub" data-i18n="pc_sub_windows">Без разводов, снаружи и внутри</div>
+          </div>
+          <div class="pc-price-big">
+            <span class="pc-from-label" data-i18n="pc_from_label">начиная от</span>
+            <span class="pc-amount">2 000 дин</span>
+          </div>
+        </div>
+        <div class="pricing-rows">
+          <div class="p-row"><span class="p-area" data-i18n="prices_row1">до 49 м²</span><span class="p-price">2 000 дин</span></div>
+          <div class="p-row"><span class="p-area" data-i18n="prices_row2">от 50 м²</span><span class="p-price">3 000 дин</span></div>
+          <div class="p-row"><span class="p-area" data-i18n="prices_row3">от 70 м²</span><span class="p-price">4 000 дин</span></div>
+          <div class="p-row"><span class="p-area" data-i18n="prices_row4">от 100 м²</span><span class="p-price">6 000 дин</span></div>
+        </div>
+      </div>
+
+      <div class="pricing-note-card" data-i18n="prices_note_combined">✓ Минимальный заказ — 5 000 дин. При повышенной сложности стоимость может быть увеличена до 20%. Коммерческие помещения — по договорённости.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ UPHOLSTERY ════════════════════════════════ -->
+<section class="upholstery-sec" id="himchistka">
+  <div class="tag" data-i18n="badge_dry">Химчистка мебели</div>
+  <h2 class="sec-h2" data-i18n="dry_title">Химчистка мебели</h2>
+  <p class="sec-sub" data-i18n="dry_sub">Профессиональная чистка мягкой мебели, ковров и матрасов</p>
+
+  <div class="uph-layout">
+    <div class="uph-info">
+      <div class="uph-callout">
+        <div class="uph-callout-label" data-i18n="uph_min_label">Минимальный заказ</div>
+        <div class="uph-callout-amount">5 000 дин</div>
+        <div class="uph-callout-sub" data-i18n="uph_callout_sub">Цена может быть увеличена на 25% при высокой степени загрязнения.</div>
+      </div>
+      <p class="uph-extra-text" data-i18n="uph_extra_text">Используем профессиональное оборудование и экологически чистые средства. Сушка включена в стоимость.</p>
+      <button class="btn-sage open-modal-btn" data-i18n="uph_book_btn">Заказать химчистку</button>
+    </div>
+
+    <div class="uph-table">
+      <div class="uph-row">
+        <div><div class="uph-name" data-i18n="dry_pillow">Подушка</div></div>
+        <div class="uph-price">от 300 дин</div>
+      </div>
+      <div class="uph-row">
+        <div><div class="uph-name" data-i18n="dry_chair">Стул</div></div>
+        <div class="uph-price">от 400 дин</div>
+      </div>
+      <div class="uph-row">
+        <div><div class="uph-name" data-i18n="dry_pouf">Пуф</div></div>
+        <div class="uph-price">от 500 дин</div>
+      </div>
+      <div class="uph-row">
+        <div><div class="uph-name" data-i18n="dry_armchair">Кресло</div></div>
+        <div class="uph-price">от 1 000 дин</div>
+      </div>
+      <div class="uph-row">
+        <div>
+          <div class="uph-name" data-i18n="dry_sofa2">Диван 2-местный</div>
+          <div class="uph-note" data-i18n="dry_note_sofa">Зависит от модели и материала</div>
+        </div>
+        <div class="uph-price">от 2 000 дин</div>
+      </div>
+      <div class="uph-row">
+        <div><div class="uph-name" data-i18n="dry_sofa3">Диван 3-местный</div></div>
+        <div class="uph-price">от 3 000 дин</div>
+      </div>
+      <div class="uph-row">
+        <div><div class="uph-name" data-i18n="dry_sofa4">Диван 4-м, угловой</div></div>
+        <div class="uph-price">от 4 000 дин</div>
+      </div>
+      <div class="uph-row">
+        <div>
+          <div class="uph-name" data-i18n="dry_mattress2">Матрас 2-сп.</div>
+          <div class="uph-note" data-i18n="uph_dry_incl">Сушка включена</div>
+        </div>
+        <div class="uph-price">от 4 000 дин</div>
+      </div>
+      <div class="uph-row">
+        <div>
+          <div class="uph-name" data-i18n="dry_carpet">Ковёр</div>
+          <div class="uph-note" data-i18n="dry_note_carpet">Зависит от вида материала</div>
+        </div>
+        <div class="uph-price">от 400 дин / м²</div>
+      </div>
+      <div class="uph-row">
+        <div><div class="uph-name" data-i18n="dry_carpet_roll">Ковролин</div></div>
+        <div class="uph-price">от 300 дин / м²</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════ STATS BAR -->
-<div class="stats-bar">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item reveal">
-        <div class="stat-value" data-count="2" data-suffix="+">2+</div>
-        <div class="stat-label" data-i18n="stat_years">лет на рынке</div>
-      </div>
-      <div class="stat-item reveal delay-1">
-        <div class="stat-value" data-count="500" data-suffix="+">500+</div>
-        <div class="stat-label" data-i18n="stat_cleanings">уборок выполнено</div>
-      </div>
-      <div class="stat-item reveal delay-2">
-        <div class="stat-value" data-count="3" data-suffix="">3</div>
-        <div class="stat-label" data-i18n="stat_langs">языка поддержки</div>
-      </div>
-      <div class="stat-item reveal delay-3">
-        <div class="stat-value">5 000</div>
-        <div class="stat-label" data-i18n="stat_min">дин — минималка</div>
-      </div>
+<!-- ═══════════════════════════════════ WHAT WE DON'T DO ══════════════════════════ -->
+<section class="no-section">
+  <div class="no-layout">
+    <div class="no-lhs appear">
+      <div class="tag" data-i18n="badge_dont">Важно знать</div>
+      <h2 class="sec-h2"><span data-i18n="dont_title_part1">Что мы</span> <em style="color:var(--rust)" data-i18n="dont_title_part2">не выполняем</em></h2>
+      <p class="sec-sub" data-i18n="dont_sub">Даже за дополнительную плату — чтобы вы знали заранее</p>
     </div>
-  </div>
-</div>
-
-<!-- Organic divider -->
-<div class="organic-divider" aria-hidden="true" style="background:var(--sage-900)">
-  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <path d="M0,60 C200,20 400,50 720,30 C1040,10 1240,50 1440,20 L1440,60 Z" fill="var(--cream)"/>
-  </svg>
-</div>
-
-<!-- ══════════════════════ SERVICES -->
-<section class="section" id="services">
-  <div class="container">
-    <span class="section-badge reveal" data-i18n="badge_services">Клининговые услуги</span>
-    <h2 class="section-title reveal" data-i18n="services_title">Наши услуги</h2>
-    <p class="section-sub reveal" data-i18n="services_sub">Профессиональная уборка для вашего дома и бизнеса</p>
-
-    <div class="services-grid">
-      <div class="service-card reveal delay-1">
-        <div class="service-icon">🧹</div>
-        <h3 data-i18n="svc_basic_title">Базовая уборка</h3>
-        <ul>
-          <li data-i18n="svc_basic_1">Удаление пыли и загрязнений с поверхностей мебели и техники</li>
-          <li data-i18n="svc_basic_2">Сухая и влажная уборка полов</li>
-          <li data-i18n="svc_basic_3">Замена постельного белья</li>
-          <li data-i18n="svc_basic_4">Уборка санузлов</li>
-          <li data-i18n="svc_basic_5">Уборка кухни (посуда, плита, раковина, фартуки, фасады, открытые полки, полы)</li>
-          <li data-i18n="svc_basic_6">Вынос мусора</li>
-        </ul>
-      </div>
-
-      <div class="service-card reveal delay-2">
-        <div class="service-icon">✨</div>
-        <h3 data-i18n="svc_deep_title">Генеральная уборка</h3>
-        <ul>
-          <li data-i18n="svc_deep_1">Удаление пыли, паутины и загрязнений со всех поверхностей</li>
-          <li data-i18n="svc_deep_2">Очистка мебели, включая внутренние отделения и светильники</li>
-          <li data-i18n="svc_deep_3">Поверхностная очистка мягкой мебели</li>
-          <li data-i18n="svc_deep_4">Сухая и влажная уборка полов, включая труднодоступные места</li>
-          <li data-i18n="svc_deep_5">Замена постельного белья</li>
-          <li data-i18n="svc_deep_6">Тщательная уборка санузлов, включая удаление плесени и известкового налёта</li>
-          <li data-i18n="svc_deep_7">Уборка кухни, включая внутренние отделения мебели</li>
-          <li data-i18n="svc_deep_8">Мытьё окон</li>
-          <li data-i18n="svc_deep_9">Вынос мусора</li>
-        </ul>
-      </div>
-
-      <div class="service-card reveal delay-3">
-        <div class="service-icon">🏗️</div>
-        <h3 data-i18n="svc_reno_title">После ремонта</h3>
-        <ul>
-          <li data-i18n="svc_reno_1">Очистка от строительной пыли всех поверхностей мебели, включая внутренние отделения и светильники</li>
-          <li data-i18n="svc_reno_2">Сухая очистка стен и потолков</li>
-          <li data-i18n="svc_reno_3">Поверхностная сухая очистка мягкой мебели профессиональным пылесосом</li>
-          <li data-i18n="svc_reno_4">Сухая и влажная уборка полов, включая труднодоступные места</li>
-          <li data-i18n="svc_reno_5">Мытьё окон, очистка от краски и клея</li>
-          <li data-i18n="svc_reno_6">Уборка санузлов и кухни, включая внутренние отделения мебели</li>
-          <li data-i18n="svc_reno_7">Вынос некрупногабаритного мусора</li>
-        </ul>
-      </div>
-
-      <div class="service-card reveal delay-4">
-        <div class="service-icon">🪟</div>
-        <h3 data-i18n="svc_windows_title">Мытьё окон</h3>
-        <ul>
-          <li data-i18n="svc_windows_1">Мытьё стёкол изнутри и снаружи</li>
-          <li data-i18n="svc_windows_2">Очистка рам и подоконников</li>
-          <li data-i18n="svc_windows_3">Удаление следов краски и клея</li>
-          <li data-i18n="svc_windows_4">Профессиональные средства без разводов</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Organic divider -->
-<div class="organic-divider" aria-hidden="true" style="background:var(--cream)">
-  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <path d="M0,0 C300,50 600,10 900,40 C1200,70 1340,20 1440,50 L1440,60 L0,60 Z" fill="var(--cream-2)"/>
-  </svg>
-</div>
-
-<!-- ══════════════════════ WHO WE SERVE -->
-<section class="section section--alt" id="who">
-  <div class="container">
-    <span class="section-badge reveal" data-i18n="badge_who">Для кого мы</span>
-    <h2 class="section-title reveal" data-i18n="who_title">Для кого мы работаем</h2>
-    <p class="section-sub reveal">&nbsp;</p>
-    <div class="who-grid">
-      <div class="who-card who-card--private reveal-left">
-        <div class="who-blob-deco blob"></div>
-        <div class="who-icon">🏠</div>
-        <h3 data-i18n="who_private_title">Для физических лиц</h3>
-        <p data-i18n="who_private_desc">Уборка квартир, домов и частных апартаментов. Разовая или регулярная уборка по удобному для вас расписанию.</p>
-        <button class="btn-sage-light open-modal-btn" data-i18n="nav_book">Оставить заявку</button>
-      </div>
-      <div class="who-card who-card--biz reveal-right">
-        <div class="who-blob-deco blob-2"></div>
-        <div class="who-icon">🏢</div>
-        <h3 data-i18n="who_biz_title">Для бизнеса</h3>
-        <p data-i18n="who_biz_desc">Уборка офисов, торговых площадей, ресторанов, отелей и других коммерческих помещений. Условия и цена — по договорённости.</p>
-        <a class="btn-sage-solid" href="https://t.me/clcleanrs" target="_blank" rel="noopener" data-i18n="who_biz_cta">Обсудить условия</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Organic divider -->
-<div class="organic-divider" aria-hidden="true" style="background:var(--cream-2)">
-  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <path d="M0,40 C240,10 480,55 720,25 C960,0 1200,45 1440,15 L1440,60 L0,60 Z" fill="var(--cream)"/>
-  </svg>
-</div>
-
-<!-- ══════════════════════ PRICING -->
-<section class="section" id="prices">
-  <div class="container">
-    <span class="section-badge reveal" data-i18n="badge_prices">Прозрачные цены</span>
-    <h2 class="section-title reveal" data-i18n="prices_title">Цены на клининг</h2>
-    <p class="section-sub reveal">&nbsp;</p>
-
-    <div class="price-cards reveal">
-      <div class="price-card">
-        <div class="price-card-icon">🧹</div>
-        <h3 class="price-card-title" data-i18n="prices_basic">Базовая уборка</h3>
-        <div class="price-card-rows">
-          <div class="price-card-row"><span data-i18n="prices_row1">до 49 м²</span><strong>6 000 <small>дин</small></strong></div>
-          <div class="price-card-row"><span data-i18n="prices_row2">от 50 м²</span><strong>7 000 <small>дин</small></strong></div>
-          <div class="price-card-row"><span data-i18n="prices_row3">от 70 м²</span><strong>8 000 <small>дин</small></strong></div>
-          <div class="price-card-row"><span data-i18n="prices_row4">от 100 м²</span><strong>+500 / 10м²</strong></div>
+    <div class="no-list">
+      <div class="no-item appear">
+        <div class="no-icon">🐾</div>
+        <div class="no-text">
+          <div class="no-title" data-i18n="dont_animals_title">Кормление животных и уборка их туалета</div>
+          <p class="no-desc" data-i18n="dont_animals_desc">Пожалуйста, позаботьтесь о питомцах перед нашим приходом.</p>
         </div>
       </div>
-      <div class="price-card">
-        <div class="price-card-icon">✨</div>
-        <h3 class="price-card-title" data-i18n="prices_deep">Генеральная уборка</h3>
-        <div class="price-card-rows">
-          <div class="price-card-row"><span data-i18n="prices_row1">до 49 м²</span><strong>13 000 <small>дин</small></strong></div>
-          <div class="price-card-row"><span data-i18n="prices_row2">от 50 м²</span><strong>15 000 <small>дин</small></strong></div>
-          <div class="price-card-row"><span data-i18n="prices_row3">от 70 м²</span><strong>17 000 <small>дин</small></strong></div>
-          <div class="price-card-row"><span data-i18n="prices_row4">от 100 м²</span><strong>+1 000 / 10м²</strong></div>
+      <div class="no-item appear">
+        <div class="no-icon">👗</div>
+        <div class="no-text">
+          <div class="no-title" data-i18n="dont_personal_title">Разбор личных вещей, раскладывание по шкафам, стирка</div>
+          <p class="no-desc" data-i18n="dont_personal_desc">Мы уважаем вашу приватность и не перекладываем личные вещи.</p>
         </div>
       </div>
-      <div class="price-card">
-        <div class="price-card-icon">🏗️</div>
-        <h3 class="price-card-title" data-i18n="prices_reno">После ремонта</h3>
-        <div class="price-card-rows">
-          <div class="price-card-row"><span data-i18n="prices_row1">до 49 м²</span><strong>18 000 <small>дин</small></strong></div>
-          <div class="price-card-row"><span data-i18n="prices_row2">от 50 м²</span><strong>20 000 <small>дин</small></strong></div>
-          <div class="price-card-row"><span data-i18n="prices_row3">от 70 м²</span><strong>22 000 <small>дин</small></strong></div>
-          <div class="price-card-row"><span data-i18n="prices_row4">от 100 м²</span><strong>+1 000 / 10м²</strong></div>
-        </div>
-      </div>
-      <div class="price-card">
-        <div class="price-card-icon">🪟</div>
-        <h3 class="price-card-title" data-i18n="prices_windows">Мытьё окон</h3>
-        <div class="price-card-rows">
-          <div class="price-card-row"><span data-i18n="prices_row1">до 49 м²</span><strong>2 000 <small>дин</small></strong></div>
-          <div class="price-card-row"><span data-i18n="prices_row2">от 50 м²</span><strong>3 000 <small>дин</small></strong></div>
-          <div class="price-card-row"><span data-i18n="prices_row3">от 70 м²</span><strong>4 000 <small>дин</small></strong></div>
-          <div class="price-card-row"><span data-i18n="prices_row4">от 100 м²</span><strong>6 000 <small>дин</small></strong></div>
+      <div class="no-item appear">
+        <div class="no-icon">🍄</div>
+        <div class="no-text">
+          <div class="no-title" data-i18n="dont_mold_title">Удаление обширных очагов плесени</div>
+          <p class="no-desc" data-i18n="dont_mold_desc">Обширные очаги плесени, требующие строительных работ, вне нашей компетенции.</p>
         </div>
       </div>
     </div>
-    <p class="price-commercial reveal" data-i18n="prices_row5_note">🏢 <span data-i18n="prices_row5">Коммерческие помещения</span> — <span data-i18n="prices_commercial">по договорённости</span></p>
-
-    <p class="table-note reveal" data-i18n="prices_note">
-      При повышенной сложности работ и наличии сложных загрязнений итоговая стоимость уборки может быть увеличена до 20%
-    </p>
-    <div class="reveal"><span class="min-order" data-i18n="prices_min">Минимальная сумма заказа — 5 000 дин</span></div>
   </div>
 </section>
 
-<!-- Organic divider -->
-<div class="organic-divider" aria-hidden="true" style="background:var(--cream)">
-  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <path d="M0,20 C360,60 720,10 1080,45 C1260,62 1380,25 1440,40 L1440,60 L0,60 Z" fill="var(--cream-2)"/>
-  </svg>
+<!-- ═══════════════════════════════════ GALLERY ═══════════════════════════════════ -->
+<section class="gallery-section" id="galeria">
+  <div class="tag" data-i18n="badge_gallery">Наши работы</div>
+  <h2 class="sec-h2" data-i18n="gallery_title">Результаты говорят сами за себя</h2>
+  <p class="sec-sub" data-i18n="gallery_sub">Фотографии клиентов — до и после уборки</p>
+
+  <div class="gallery-grid">
+    <div class="gallery-thumb" onclick="openGallery(0)"><img src="assets/gallery/work-01.jpg" alt="До и после 1" loading="lazy" /></div>
+    <div class="gallery-thumb" onclick="openGallery(1)"><img src="assets/gallery/work-02.jpg" alt="До и после 2" loading="lazy" /></div>
+    <div class="gallery-thumb" onclick="openGallery(2)"><img src="assets/gallery/work-03.jpg" alt="До и после 3" loading="lazy" /></div>
+    <div class="gallery-thumb" onclick="openGallery(3)"><img src="assets/gallery/work-04.jpg" alt="До и после 4" loading="lazy" /></div>
+    <div class="gallery-thumb" onclick="openGallery(4)"><img src="assets/gallery/work-05.jpg" alt="До и после 5" loading="lazy" /></div>
+    <div class="gallery-thumb" onclick="openGallery(5)"><img src="assets/gallery/work-06.jpg" alt="До и после 6" loading="lazy" /></div>
+    <div class="gallery-thumb" onclick="openGallery(6)"><img src="assets/gallery/work-07.jpg" alt="До и после 7" loading="lazy" /></div>
+    <div class="gallery-thumb" onclick="openGallery(7)"><img src="assets/gallery/work-08.jpg" alt="До и после 8" loading="lazy" /></div>
+  </div>
+
+  <div class="gallery-cta">
+    <button id="gallery-open-btn" class="btn-outline" data-i18n="gallery_btn">Посмотреть фотографии</button>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ CTA BANNER ═══════════════════════════════ -->
+<div class="cta-banner">
+  <div class="cta-banner-text appear">
+    <h2 class="cta-banner-h" data-i18n="cta_title">Готовы к чистоте?</h2>
+    <p class="cta-banner-sub" data-i18n="cta_sub">Оставьте заявку — мы свяжемся с вами и обсудим детали</p>
+  </div>
+  <div class="cta-banner-right appear">
+    <button class="btn-white open-modal-btn" data-i18n="cta_form_btn">Оставить заявку</button>
+    <a href="https://t.me/clcleanrs" target="_blank" rel="noopener" class="btn-ghost" data-i18n="cta_tg_btn">Написать в Telegram</a>
+  </div>
 </div>
 
-<!-- ══════════════════════ ADDITIONAL SERVICES -->
-<section class="section section--alt" id="additional">
-  <div class="container">
-    <span class="section-badge reveal" data-i18n="badge_add">Доп. опции</span>
-    <h2 class="section-title reveal" data-i18n="add_title">Дополнительные услуги</h2>
-    <p class="section-sub reveal">&nbsp;</p>
+<!-- ═══════════════════════════════════ CONTACT ═══════════════════════════════════ -->
+<section class="contact-section" id="kontakty">
+  <div class="contact-info-col appear">
+    <div class="tag" data-i18n="footer_contacts">Контакты</div>
+    <h2 class="contact-h2" data-i18n="contact_h">Свяжитесь с нами</h2>
+    <p class="contact-sub" data-i18n="contact_sub">Отвечаем в течение 30 минут в рабочее время.</p>
 
-    <div class="add-cards reveal">
-      <div class="add-card">
-        <div class="add-card-icon">🏠</div>
-        <h3 data-i18n="add_balcony">Уборка балконов и террас</h3>
-        <p class="add-card-price"><span data-i18n="from_price">от</span> 1 000 <small>дин</small></p>
-        <p class="add-card-note" data-i18n="add_balcony_note">Стоимость зависит от площади и степени загрязнения</p>
+    <div class="contact-list">
+      <div class="contact-row">
+        <div class="contact-row-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.69-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.25.38-.51 1.07-.78 4.19-1.82 6.98-3.02 8.38-3.61 3.99-1.66 4.82-1.95 5.36-1.96.12 0 .38.03.55.17.14.12.18.28.2.4-.02.06-.02.13-.03.2z"/></svg>
+        </div>
+        <div class="contact-row-text">
+          <div class="contact-row-label">Telegram</div>
+          <div class="contact-row-val"><a href="https://t.me/clcleanrs" target="_blank" rel="noopener">@clcleanrs</a></div>
+        </div>
       </div>
-      <div class="add-card">
-        <div class="add-card-icon">🪞</div>
-        <h3 data-i18n="add_glass">Мытьё стеклянных ограждений</h3>
-        <p class="add-card-price"><span data-i18n="from_price">от</span> 1 000 <small>дин</small></p>
-        <p class="add-card-note" data-i18n="add_glass_note">Стоимость зависит от размера и степени загрязнения</p>
+      <div class="contact-row">
+        <div class="contact-row-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </div>
+        <div class="contact-row-text">
+          <div class="contact-row-label">Instagram</div>
+          <div class="contact-row-val"><a href="https://instagram.com/clean_cleanom.rs" target="_blank" rel="noopener">@clean_cleanom.rs</a></div>
+        </div>
       </div>
-      <div class="add-card">
-        <div class="add-card-icon">🍳</div>
-        <h3 data-i18n="add_items">Предметная чистка (СВЧ, духовка, вытяжка)</h3>
-        <p class="add-card-price"><span data-i18n="from_price">от</span> 1 000 <small>дин</small></p>
-        <p class="add-card-note" data-i18n="add_items_note">Стоимость варьируется и зависит от степени загрязнения</p>
+      <div class="contact-row">
+        <div class="contact-row-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </div>
+        <div class="contact-row-text">
+          <div class="contact-row-label">Email</div>
+          <div class="contact-row-val"><a href="mailto:info@cleancleanom.rs">info@cleancleanom.rs</a></div>
+        </div>
       </div>
-      <div class="add-card">
-        <div class="add-card-icon">👔</div>
-        <h3 data-i18n="add_iron_personal">Глажка — личные вещи</h3>
-        <p class="add-card-price"><span data-i18n="from_price">от</span> 1 000 <small>дин</small></p>
-        <p class="add-card-note" data-i18n="add_iron_personal_note">До 10 вещей, далее 100 дин/шт</p>
-      </div>
-      <div class="add-card">
-        <div class="add-card-icon">🪡</div>
-        <h3 data-i18n="add_iron_curtains">Глажка — шторы, тюли</h3>
-        <p class="add-card-price"><span data-i18n="from_price">от</span> 2 000 <small>дин</small></p>
-        <p class="add-card-note" data-i18n="add_iron_curtains_note">Зависит от сложности материала и количества изделий</p>
+      <div class="contact-row">
+        <div class="contact-row-icon">🕐</div>
+        <div class="contact-row-text">
+          <div class="contact-row-label" data-i18n="footer_hours_title">Часы работы</div>
+          <div class="contact-row-val" data-i18n="contact_hours_val">Вт – Вс: 08:00 – 20:00</div>
+        </div>
       </div>
     </div>
   </div>
-</section>
 
-<!-- Organic divider -->
-<div class="organic-divider" aria-hidden="true" style="background:var(--cream-2)">
-  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <path d="M0,50 C180,15 540,55 900,20 C1160,0 1340,40 1440,30 L1440,60 L0,60 Z" fill="var(--cream)"/>
-  </svg>
-</div>
-
-<!-- ══════════════════════ DRY CLEANING -->
-<section class="section" id="dry">
-  <div class="container">
-    <span class="section-badge reveal" data-i18n="badge_dry">Химчистка мебели</span>
-    <h2 class="section-title reveal" data-i18n="dry_title">Химчистка мебели</h2>
-    <p class="section-sub reveal" data-i18n="dry_sub">Профессиональная чистка мягкой мебели, ковров и матрасов</p>
-
-    <div class="table-wrap reveal">
-      <table class="dry-table">
-        <thead>
-          <tr>
-            <th data-i18n="dry_item">Предмет мебели</th>
-            <th data-i18n="dry_price">Цена (дин)</th>
-            <th data-i18n="dry_notes">Примечания</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td data-i18n="dry_pillow">Подушка</td><td><span data-i18n="from_price">от</span> 300</td><td rowspan="4" data-i18n="dry_note_model">Стоимость зависит от модели и материала</td></tr>
-          <tr><td data-i18n="dry_chair">Стул</td><td><span data-i18n="from_price">от</span> 400</td></tr>
-          <tr><td data-i18n="dry_pouf">Пуф</td><td><span data-i18n="from_price">от</span> 500</td></tr>
-          <tr><td data-i18n="dry_armchair">Кресло</td><td><span data-i18n="from_price">от</span> 1 000</td></tr>
-          <tr><td data-i18n="dry_sofa2">Диван 2-местный</td><td><span data-i18n="from_price">от</span> 2 000</td><td rowspan="3" data-i18n="dry_note_sofa">Стоимость зависит от модели и материала</td></tr>
-          <tr><td data-i18n="dry_sofa3">Диван 3-местный</td><td><span data-i18n="from_price">от</span> 3 000</td></tr>
-          <tr><td data-i18n="dry_sofa4">Диван 4-м, угловой</td><td><span data-i18n="from_price">от</span> 4 000</td></tr>
-          <tr><td data-i18n="dry_bed">Кровать</td><td><span data-i18n="from_price">от</span> 2 000</td><td rowspan="4" data-i18n="dry_note_mattress">Стоимость варьируется в зависимости от двусторонней или односторонней чистки. Полная сушка изделия включена в стоимость.</td></tr>
-          <tr><td data-i18n="dry_mattress1">Матрас 1-сп.</td><td><span data-i18n="from_price">от</span> 2 000</td></tr>
-          <tr><td data-i18n="dry_mattress15">Матрас 1,5-сп.</td><td><span data-i18n="from_price">от</span> 3 000</td></tr>
-          <tr><td data-i18n="dry_mattress2">Матрас 2-сп.</td><td><span data-i18n="from_price">от</span> 4 000</td></tr>
-          <tr><td data-i18n="dry_mattress_king">Матрас King Size</td><td><span data-i18n="from_price">от</span> 5 000</td><td></td></tr>
-          <tr><td data-i18n="dry_carpet">Ковёр</td><td><span data-i18n="from_price">от</span> 400 <span data-i18n="per_sqm">/ м²</span></td><td rowspan="2" data-i18n="dry_note_carpet">Стоимость зависит от вида материала и площади</td></tr>
-          <tr><td data-i18n="dry_carpet_roll">Ковролин</td><td><span data-i18n="from_price">от</span> 300 <span data-i18n="per_sqm">/ м²</span></td></tr>
-          <tr><td data-i18n="dry_kids">Детские аксессуары</td><td data-i18n="dry_by_agreement">по договорённости</td><td data-i18n="dry_kids_note">Матрас / коляска / детское кресло</td></tr>
-          <tr><td data-i18n="dry_dryer">Сушка</td><td>1 000 <span data-i18n="per_hour">/ час</span></td><td data-i18n="dry_dryer_note">Опционально</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <p class="dry-warning reveal" data-i18n="dry_warning">
-      Стоимость может быть увеличена на 25% от цены химчистки при высокой степени загрязнения или необходимости устранения неприятных запахов.
-    </p>
-    <div class="reveal"><span class="min-order" data-i18n="dry_min">Минимальная стоимость заказа — 5 000 дин</span></div>
-  </div>
-</section>
-
-<!-- Organic divider -->
-<div class="organic-divider" aria-hidden="true" style="background:var(--cream)">
-  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <path d="M0,30 C400,60 800,10 1200,45 C1320,55 1390,35 1440,40 L1440,60 L0,60 Z" fill="var(--cream-2)"/>
-  </svg>
-</div>
-
-<!-- ══════════════════════ WHAT WE DON'T DO -->
-<section class="section section--alt" id="dont">
-  <div class="container">
-    <span class="section-badge reveal" data-i18n="badge_dont">Важно знать</span>
-    <h2 class="section-title reveal" data-i18n="dont_title">Что мы не выполняем</h2>
-    <p class="section-sub reveal" data-i18n="dont_sub">Даже за дополнительную плату</p>
-
-    <div class="dont-grid">
-      <div class="dont-card reveal delay-1">
-        <div class="dont-icon">🐾</div>
-        <h3 data-i18n="dont_animals_title">Кормление животных и уборка их туалета</h3>
-        <p data-i18n="dont_animals_desc">Пожалуйста, позаботьтесь о своих питомцах заранее, чтобы они чувствовали себя комфортно во время уборки.</p>
+  <div class="contact-form-col appear">
+    <form id="contact-form-quick" class="form-wrap" novalidate>
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+      <div class="f-row">
+        <div class="f-group">
+          <label class="f-label" for="q-name" data-i18n="modal_name_label">Ваше имя</label>
+          <input class="f-input" id="q-name" type="text" name="name" data-i18n-placeholder="modal_name_placeholder" placeholder="Имя" />
+        </div>
+        <div class="f-group">
+          <label class="f-label" for="q-phone" data-i18n="modal_phone_label">Телефон</label>
+          <input class="f-input" id="q-phone" type="tel" name="phone" data-i18n-placeholder="modal_phone_placeholder" placeholder="+381 ..." />
+        </div>
       </div>
-      <div class="dont-card reveal delay-2">
-        <div class="dont-icon">👗</div>
-        <h3 data-i18n="dont_personal_title">Разбор личных вещей, раскладывание по шкафам, стирка</h3>
-        <p data-i18n="dont_personal_desc">Мы уважаем вашу приватность и не перекладываем, не разбираем и не стираем личные вещи.</p>
+      <div class="f-group">
+        <label class="f-label" for="q-type" data-i18n="modal_type_label">Вид уборки</label>
+        <div class="f-select-wrap">
+          <select class="f-select" id="q-type" name="cleaning_type">
+            <option value="" disabled selected data-i18n="modal_type_placeholder">Выберите...</option>
+            <option value="basic" data-i18n="modal_type_basic">Базовая уборка</option>
+            <option value="deep" data-i18n="modal_type_deep">Генеральная уборка</option>
+            <option value="reno" data-i18n="modal_type_reno">После ремонта</option>
+            <option value="dry" data-i18n="dry_title_short">Химчистка</option>
+            <option value="windows" data-i18n="svc_windows_title">Мытьё окон</option>
+          </select>
+        </div>
       </div>
-      <div class="dont-card reveal delay-3">
-        <div class="dont-icon">🍄</div>
-        <h3 data-i18n="dont_mold_title">Удаление обширных очагов плесени</h3>
-        <p data-i18n="dont_mold_desc">Обширные очаги плесени, требующие строительных работ, не входят в сферу наших услуг.</p>
+      <div class="f-group">
+        <label class="f-label" data-i18n="modal_contact_label">Способ связи</label>
+        <div class="f-methods">
+          <div class="f-method active" data-method="telegram" onclick="pickMethod(this)">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.69-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.25.38-.51 1.07-.78 4.19-1.82 6.98-3.02 8.38-3.61 3.99-1.66 4.82-1.95 5.36-1.96.12 0 .38.03.55.17.14.12.18.28.2.4-.02.06-.02.13-.03.2z"/></svg>
+            Telegram
+          </div>
+          <div class="f-method" data-method="email" onclick="pickMethod(this)">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            Email
+          </div>
+        </div>
       </div>
-    </div>
+      <button type="submit" class="f-submit">
+        <span data-i18n="modal_submit">Отправить заявку</span> →
+      </button>
+    </form>
   </div>
 </section>
 
-<!-- ══════════════════════ GALLERY -->
-<section class="section gallery-section" id="gallery">
-  <div class="container" style="text-align:center">
-    <span class="section-badge reveal" data-i18n="badge_gallery">Наши работы</span>
-    <h2 class="section-title reveal" data-i18n="gallery_title">Результаты говорят сами за себя</h2>
-    <p class="section-sub reveal" data-i18n="gallery_sub">Фотографии клиентов — до и после уборки</p>
-    <button class="btn-primary gallery-open-btn reveal" id="gallery-open-btn" data-i18n="gallery_btn">Посмотреть фотографии</button>
-  </div>
-</section>
-
-<!-- Organic divider -->
-<div class="organic-divider" aria-hidden="true" style="background:var(--cream)">
-  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <path d="M0,20 C300,55 700,5 1100,40 C1250,52 1360,28 1440,30 L1440,60 L0,60 Z" fill="var(--sage-900)"/>
-  </svg>
-</div>
-
-<!-- ══════════════════════ CTA -->
-<section class="cta-section" id="contacts">
-  <div class="cta-blob cta-blob--1 blob"></div>
-  <div class="cta-blob cta-blob--2 blob-2"></div>
-  <div class="container" style="position:relative;z-index:1;">
-    <span class="section-badge reveal" style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2);color:var(--sage-200);" data-i18n="badge_cta">Запишитесь сейчас</span>
-    <h2 class="section-title reveal" data-i18n="cta_title">Готовы к чистоте?</h2>
-    <p class="reveal" data-i18n="cta_sub">Оставьте заявку — мы свяжемся с вами и обсудим детали</p>
-    <div class="cta-buttons reveal">
-      <button class="btn-cta-primary open-modal-btn" data-i18n="cta_form_btn">Оставить заявку</button>
-      <a class="btn-cta-tg" href="https://t.me/clcleanrs" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M11.944 0A12 12 0 1 0 12 24a12 12 0 0 0-.056-24zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-        <span data-i18n="cta_tg_btn">Написать в Telegram</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════ FOOTER -->
+<!-- ═══════════════════════════════════ FOOTER ════════════════════════════════════ -->
 <footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="logo">
-          <img src="assets/logo.svg" alt="Clean Cleanom" />
-        </div>
-        <p class="footer-tagline" data-i18n="footer_since">Работаем с 2023 года</p>
-        <div class="social-links">
-          <a class="social-link" href="https://t.me/clcleanrs" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M11.944 0A12 12 0 1 0 12 24a12 12 0 0 0-.056-24zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
-          <a class="social-link" href="https://www.instagram.com/clean_cleanom.rs" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
-          <a class="social-link" href="mailto:info@cleancleanom.rs" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
-        </div>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="f-logo">
+        <img src="assets/logo.svg" alt="Clean Cleanom" height="36" class="f-logo-img" />
       </div>
-
-      <div class="footer-col">
-        <h4 data-i18n="nav_services">Услуги</h4>
-        <ul>
-          <li><a href="#services" data-i18n="svc_basic_title">Базовая уборка</a></li>
-          <li><a href="#services" data-i18n="svc_deep_title">Генеральная уборка</a></li>
-          <li><a href="#services" data-i18n="svc_reno_title">После ремонта</a></li>
-          <li><a href="#dry"      data-i18n="nav_dry">Химчистка</a></li>
-          <li><a href="#additional" data-i18n="add_title">Доп. услуги</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4 data-i18n="footer_hours_title">Часы работы</h4>
-        <div class="footer-hours">
-          <div class="hours-row">
-            <span class="days" data-i18n="footer_hours_weekdays">Вт — Вс</span>
-            <span class="time" data-i18n="footer_hours_time">08:00 – 20:00</span>
-          </div>
-          <div class="hours-row hours-row--closed">
-            <span class="days">Пн</span>
-            <span class="time" data-i18n="footer_hours_monday">выходной</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-col">
-        <h4 data-i18n="footer_contacts">Контакты</h4>
-        <div class="footer-contact-item">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M11.944 0A12 12 0 1 0 12 24a12 12 0 0 0-.056-24zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-          <a href="https://t.me/clcleanrs" target="_blank" rel="noopener">@clcleanrs</a>
-        </div>
-        <div class="footer-contact-item">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-          <a href="https://www.instagram.com/clean_cleanom.rs" target="_blank" rel="noopener">@clean_cleanom.rs</a>
-        </div>
-        <div class="footer-contact-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <a href="mailto:info@cleancleanom.rs">info@cleancleanom.rs</a>
-        </div>
-      </div>
+      <p class="f-tagline" data-i18n="footer_tagline">Профессиональный клининговый сервис в Белграде. Работаем с 2023 года.</p>
     </div>
-
-    <div class="footer-bottom">
-      <span>© 2023–2026 Clean Cleanom</span>
-      <span data-i18n="footer_rights">Все права защищены</span>
+    <div>
+      <div class="f-col-title" data-i18n="footer_services_link">Услуги</div>
+      <ul class="f-links">
+        <li><a href="#usluge" data-i18n="svc_basic_title">Базовая уборка</a></li>
+        <li><a href="#usluge" data-i18n="svc_deep_title">Генеральная уборка</a></li>
+        <li><a href="#usluge" data-i18n="svc_reno_title">После ремонта</a></li>
+        <li><a href="#himchistka" data-i18n="dry_title_short">Химчистка</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-title" data-i18n="footer_hours_title">Часы работы</div>
+      <ul class="f-links">
+        <li><a href="#">
+          <span data-i18n="footer_hours_weekdays">Вт — Вс</span>:
+          <span data-i18n="footer_hours_time">08:00 – 20:00</span>
+        </a></li>
+        <li><a href="#" data-i18n="footer_hours_monday">Пн — выходной</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-title" data-i18n="footer_contacts">Контакты</div>
+      <ul class="f-links">
+        <li><a href="https://t.me/clcleanrs" target="_blank" rel="noopener">@clcleanrs (Telegram)</a></li>
+        <li><a href="https://instagram.com/clean_cleanom.rs" target="_blank" rel="noopener">@clean_cleanom.rs (IG)</a></li>
+        <li><a href="mailto:info@cleancleanom.rs">info@cleancleanom.rs</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">© 2023–2026 Clean Cleanom. <span data-i18n="footer_rights">Все права защищены</span>.</span>
+    <div class="f-socials">
+      <a href="https://t.me/clcleanrs" target="_blank" rel="noopener" class="f-soc" aria-label="Telegram">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.69-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.25.38-.51 1.07-.78 4.19-1.82 6.98-3.02 8.38-3.61 3.99-1.66 4.82-1.95 5.36-1.96.12 0 .38.03.55.17.14.12.18.28.2.4-.02.06-.02.13-.03.2z"/></svg>
+      </a>
+      <a href="https://instagram.com/clean_cleanom.rs" target="_blank" rel="noopener" class="f-soc" aria-label="Instagram">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a href="mailto:info@cleancleanom.rs" class="f-soc" aria-label="Email">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      </a>
     </div>
   </div>
 </footer>
 
-<!-- ══════════════════════ GALLERY MODAL -->
+<!-- ═══════════════════════ BOOKING MODAL ═════════════════════════════════════════ -->
+<div class="modal-overlay" id="modal-overlay"></div>
+<div class="modal" id="booking-modal" role="dialog" aria-modal="true" aria-labelledby="modal-heading">
+  <button class="modal-close" id="modal-close-btn" aria-label="Закрыть">✕</button>
+  <h2 class="modal-h" id="modal-heading" data-i18n="modal_title">Оставить заявку</h2>
+  <p class="modal-p" data-i18n="modal_desc">Свяжемся в течение 30 минут в рабочее время.</p>
+
+  <form id="booking-form" action="https://formspree.io/f/mjgzeqkw" method="POST" novalidate>
+    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+    <div class="f-row">
+      <div class="f-group">
+        <label class="f-label" for="area" data-i18n="modal_area_label">Площадь (м²)</label>
+        <input class="f-input" id="area" type="number" name="area_m2" min="1" data-i18n-placeholder="modal_area_placeholder" placeholder="65" />
+      </div>
+      <div class="f-group">
+        <label class="f-label" for="clean-type" data-i18n="modal_type_label">Вид уборки</label>
+        <div class="f-select-wrap">
+          <select class="f-select" id="clean-type" name="cleaning_type">
+            <option value="" disabled selected data-i18n="modal_type_placeholder">Выберите...</option>
+            <option value="basic" data-i18n="modal_type_basic">Базовая уборка</option>
+            <option value="deep" data-i18n="modal_type_deep">Генеральная уборка</option>
+            <option value="reno" data-i18n="modal_type_reno">После ремонта</option>
+            <option value="dry" data-i18n="dry_title_short">Химчистка</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="f-group">
+      <label class="f-label" data-i18n="modal_add_label">Дополнительные услуги</label>
+      <div class="f-checks">
+        <label class="f-check"><input type="checkbox" name="add_service"><span class="cb-label" data-i18n="modal_add_balcony">Уборка балкона / террасы</span></label>
+        <label class="f-check"><input type="checkbox" name="add_service"><span class="cb-label" data-i18n="modal_add_glass">Мытьё стеклянных ограждений</span></label>
+        <label class="f-check"><input type="checkbox" name="add_service"><span class="cb-label" data-i18n="modal_add_windows">Мытьё окон</span></label>
+        <label class="f-check"><input type="checkbox" name="add_service"><span class="cb-label" data-i18n="modal_add_items">Предметная чистка (СВЧ, духовка, вытяжка)</span></label>
+        <label class="f-check"><input type="checkbox" name="add_service"><span class="cb-label" data-i18n="modal_add_iron_personal">Глажка — личные вещи</span></label>
+        <label class="f-check"><input type="checkbox" name="add_service"><span class="cb-label" data-i18n="modal_add_iron_curtains">Глажка — шторы и тюли</span></label>
+      </div>
+    </div>
+
+    <div class="f-group">
+      <label class="f-label" data-i18n="modal_equip_label">Имеется инвентарь</label>
+      <div class="f-checks">
+        <label class="f-check"><input type="checkbox" name="equipment"><span class="cb-label" data-i18n="modal_equip_vacuum">Пылесос</span></label>
+        <label class="f-check"><input type="checkbox" name="equipment"><span class="cb-label" data-i18n="modal_equip_mop">Ведро со шваброй</span></label>
+      </div>
+    </div>
+
+    <div class="f-row">
+      <div class="f-group">
+        <label class="f-label" for="client-name" data-i18n="modal_name_label">Ваше имя</label>
+        <input class="f-input" id="client-name" type="text" name="name" data-i18n-placeholder="modal_name_placeholder" placeholder="Имя" />
+      </div>
+      <div class="f-group">
+        <label class="f-label" for="client-phone" data-i18n="modal_phone_label">Телефон</label>
+        <input class="f-input" id="client-phone" type="tel" name="phone" data-i18n-placeholder="modal_phone_placeholder" placeholder="+381 ..." />
+      </div>
+    </div>
+
+    <div class="f-group">
+      <label class="f-label" data-i18n="modal_contact_label">Способ связи</label>
+      <div class="f-radios">
+        <label class="f-radio-label">
+          <input type="radio" name="contact_method" value="telegram" />
+          <span class="f-radio-btn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.69-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.25.38-.51 1.07-.78 4.19-1.82 6.98-3.02 8.38-3.61 3.99-1.66 4.82-1.95 5.36-1.96.12 0 .38.03.55.17.14.12.18.28.2.4-.02.06-.02.13-.03.2z"/></svg>
+            <span data-i18n="modal_contact_tg">Telegram</span>
+          </span>
+        </label>
+        <label class="f-radio-label">
+          <input type="radio" name="contact_method" value="email" />
+          <span class="f-radio-btn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span data-i18n="modal_contact_email">Email</span>
+          </span>
+        </label>
+      </div>
+    </div>
+
+    <button type="submit" class="f-submit" id="modal-submit-btn" disabled>
+      <span data-i18n="modal_submit">Отправить заявку</span> →
+    </button>
+  </form>
+</div>
+
+<!-- ═══════════════════════ GALLERY LIGHTBOX ══════════════════════════════════════ -->
 <div class="gallery-overlay" id="gallery-overlay"></div>
-<div class="gallery-modal" id="gallery-modal" role="dialog" aria-modal="true" aria-label="Галерея работ">
+<div class="gallery-modal" id="gallery-modal" role="dialog" aria-modal="true" aria-label="Галерея">
   <button class="gallery-close" id="gallery-close" aria-label="Закрыть">✕</button>
-  <button class="gallery-nav gallery-prev" id="gallery-prev" aria-label="Предыдущее">&#8249;</button>
-  <button class="gallery-nav gallery-next" id="gallery-next" aria-label="Следующее">&#8250;</button>
-  <div class="gallery-track-wrap">
-    <div class="gallery-track" id="gallery-track"></div>
-  </div>
+  <button class="gallery-nav gallery-nav-prev" id="gallery-prev" aria-label="Предыдущее">‹</button>
+  <div class="gallery-track" id="gallery-track"></div>
+  <button class="gallery-nav gallery-nav-next" id="gallery-next" aria-label="Следующее">›</button>
   <div class="gallery-counter" id="gallery-counter">1 / 8</div>
 </div>
 
-<!-- ══════════════════════ MODAL -->
-<div class="modal-overlay" id="modal-overlay"></div>
-
-<div class="modal" id="booking-modal" role="dialog" aria-modal="true" aria-labelledby="modal-heading">
-  <div class="modal-header">
-    <h2 id="modal-heading" data-i18n="modal_title">Оставить заявку</h2>
-    <button class="modal-close" id="modal-close-btn" aria-label="Закрыть">×</button>
-  </div>
-  <div class="modal-body">
-    <form id="booking-form" action="https://formspree.io/f/mjgzeqkw" method="POST" novalidate>
-      <input type="hidden" name="_subject" value="Новая заявка — Clean Cleanom" />
-      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-
-      <div class="form-group">
-        <label class="form-label" for="area">
-          <span data-i18n="modal_area_label">Площадь помещения (м²)</span>
-        </label>
-        <input class="form-control" type="number" id="area" name="area_m2" min="1" max="9999"
-               data-i18n="modal_area_placeholder" placeholder="Например: 65" />
-      </div>
-
-      <div class="form-group">
-        <label class="form-label" for="clean-type">
-          <span data-i18n="modal_type_label">Вид уборки</span><span class="required">*</span>
-        </label>
-        <select class="form-control" id="clean-type" name="cleaning_type" required>
-          <option value="" disabled selected>—</option>
-          <option data-i18n="modal_type_basic">Базовая уборка</option>
-          <option data-i18n="modal_type_deep">Генеральная уборка</option>
-          <option data-i18n="modal_type_reno">После ремонта</option>
-        </select>
-      </div>
-
-      <hr class="form-divider" />
-
-      <div class="form-group">
-        <span class="form-label" data-i18n="modal_add_label">Дополнительные услуги</span>
-        <div class="checkbox-group">
-          <label class="checkbox-item"><input type="checkbox" name="add_service" value="balcony" /><span class="cb-label" data-i18n="modal_add_balcony">Уборка балкона / террасы</span></label>
-          <label class="checkbox-item"><input type="checkbox" name="add_service" value="glass" /><span class="cb-label" data-i18n="modal_add_glass">Мытьё стеклянных ограждений</span></label>
-          <label class="checkbox-item"><input type="checkbox" name="add_service" value="windows" /><span class="cb-label" data-i18n="modal_add_windows">Мытьё окон</span></label>
-          <label class="checkbox-item"><input type="checkbox" name="add_service" value="items" /><span class="cb-label" data-i18n="modal_add_items">Предметная чистка (СВЧ, духовка, вытяжка)</span></label>
-          <label class="checkbox-item"><input type="checkbox" name="add_service" value="iron_personal" /><span class="cb-label" data-i18n="modal_add_iron_personal">Глажка — личные вещи</span></label>
-          <label class="checkbox-item"><input type="checkbox" name="add_service" value="iron_curtains" /><span class="cb-label" data-i18n="modal_add_iron_curtains">Глажка — шторы и тюли</span></label>
-        </div>
-      </div>
-
-      <hr class="form-divider" />
-
-      <div class="form-group">
-        <span class="form-label" data-i18n="modal_equip_label">Имеется инвентарь (есть у клиента)</span>
-        <div class="checkbox-group">
-          <label class="checkbox-item"><input type="checkbox" name="equipment" value="vacuum" /><span class="cb-label" data-i18n="modal_equip_vacuum">Пылесос</span></label>
-          <label class="checkbox-item"><input type="checkbox" name="equipment" value="mop" /><span class="cb-label" data-i18n="modal_equip_mop">Ведро со шваброй</span></label>
-        </div>
-      </div>
-
-      <hr class="form-divider" />
-
-      <div class="form-row">
-        <div class="form-group">
-          <label class="form-label" for="client-name">
-            <span data-i18n="modal_name_label">Ваше имя</span><span class="required">*</span>
-          </label>
-          <input class="form-control" type="text" id="client-name" name="name" required
-                 data-i18n="modal_name_placeholder" placeholder="Имя" />
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="client-phone">
-            <span data-i18n="modal_phone_label">Телефон</span><span class="required">*</span>
-          </label>
-          <input class="form-control" type="tel" id="client-phone" name="phone" required
-                 data-i18n="modal_phone_placeholder" placeholder="+381 ..." />
-        </div>
-      </div>
-
-      <hr class="form-divider" />
-
-      <div class="form-group">
-        <span class="form-label">
-          <span data-i18n="modal_contact_label">Способ связи</span><span class="required">*</span>
-        </span>
-        <div class="radio-group">
-          <label class="radio-item">
-            <input type="radio" name="contact_method" value="telegram" />
-            <span class="radio-label">✈️ <span data-i18n="modal_contact_tg">Telegram</span></span>
-          </label>
-          <label class="radio-item">
-            <input type="radio" name="contact_method" value="email" />
-            <span class="radio-label">📧 <span data-i18n="modal_contact_email">Email</span></span>
-          </label>
-        </div>
-      </div>
-
-      <button class="btn-submit" id="modal-submit-btn" type="submit" disabled data-i18n="modal_submit">
-        Отправить заявку
-      </button>
-    </form>
-  </div>
-</div>
+<!-- TOAST -->
+<div id="toast" class="toast" role="alert" aria-live="polite"></div>
 
 <script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
