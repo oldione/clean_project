@@ -885,6 +885,7 @@ footer { background: var(--charcoal); padding: 56px 48px 36px; }
   #nav-menu.open {
     display: flex; flex-direction: column; gap: 0;
     position: fixed; top: var(--nav-h); left: 0; right: 0;
+    transform: none;
     background: var(--bg);
     border-bottom: 1px solid var(--border);
     padding: 12px 0; z-index: 199;
