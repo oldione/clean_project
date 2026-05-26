@@ -98,6 +98,10 @@ function anthropicPost(payload, apiKey) {
 }
 
 exports.handler = async (event) => {
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  console.log('API key defined:', !!apiKey);
+  console.log('Anthropic env keys:', Object.keys(process.env).filter(k => k.toLowerCase().includes('anthropic')));
+
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
@@ -121,7 +125,7 @@ exports.handler = async (event) => {
       max_tokens: 350,
       system: SYSTEM_PROMPT,
       messages: history,
-    }, process.env.ANTHROPIC_API_KEY);
+    }, apiKey);
 
     if (result.status !== 200) {
       console.error('Anthropic error:', result.body);
