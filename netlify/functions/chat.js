@@ -98,7 +98,7 @@ function anthropicPost(payload, apiKey) {
 }
 
 exports.handler = async (event) => {
-  const apiKey = process.env.ANTHROPIC_API_KEY;
+  const apiKey = process.env.Bot_key;
   console.log('API key defined:', !!apiKey);
   console.log('Anthropic env keys:', Object.keys(process.env).filter(k => k.toLowerCase().includes('anthropic')));
 
