@@ -827,5 +827,57 @@
 
 <script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
+
+<!-- ═══════════════════════════════════ CHAT WIDGET ══════════════════════════ -->
+<!-- Trigger button -->
+<div class="chat-trigger">
+  <div class="chat-bubble-hint cc-hidden" id="cc-hint">Задайте вопрос или оставьте заявку 👋</div>
+  <div id="cc-btn-wrap">
+    <div class="chat-btn" id="cc-btn">
+      <svg class="cc-icon-chat" width="24" height="24" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+      </svg>
+      <svg class="cc-icon-close" width="20" height="20" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+      <div class="chat-badge cc-hidden" id="cc-badge">1</div>
+    </div>
+  </div>
+</div>
+
+<!-- Chat panel -->
+<div class="chat-panel" id="cc-panel">
+  <div class="chat-header">
+    <div class="chat-header-left">
+      <div class="chat-header-avatar">🌿</div>
+      <div>
+        <div class="chat-header-name">Clean Cleanom</div>
+        <div class="chat-header-status">
+          <div class="cc-status-dot"></div>
+          <span>Онлайн · отвечаем за 30 мин</span>
+        </div>
+      </div>
+    </div>
+    <button class="chat-header-close" id="cc-close" aria-label="Закрыть чат">✕</button>
+  </div>
+
+  <div class="chat-messages" id="cc-messages">
+    <div class="cc-msg-time">Сегодня</div>
+  </div>
+
+  <div class="chat-footer">
+    <div class="chat-input-wrap">
+      <input class="chat-input" id="cc-input" type="text" placeholder="Напишите сообщение..." autocomplete="off" />
+    </div>
+    <button class="chat-send-btn" id="cc-send" aria-label="Отправить">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <line x1="22" y1="2" x2="11" y2="13"/>
+        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<script src="js/chat.js"></script>
 </body>
 </html>
