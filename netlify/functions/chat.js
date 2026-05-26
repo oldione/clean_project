@@ -71,6 +71,32 @@ const SYSTEM_PROMPT = `Ты — виртуальный помощник клин
 3. На вопросы не по теме клининга — вежливо откажи
 4. Если хотят оставить заявку — предложи заполнить форму в чате или написать в Telegram`;
 
+const https = require('https');
+
+function anthropicPost(payload, apiKey) {
+  return new Promise((resolve, reject) => {
+    const body = JSON.stringify(payload);
+    const req = https.request({
+      hostname: 'api.anthropic.com',
+      path: '/v1/messages',
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Content-Length': Buffer.byteLength(body),
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+      },
+    }, (res) => {
+      let data = '';
+      res.on('data', chunk => { data += chunk; });
+      res.on('end', () => resolve({ status: res.statusCode, body: data }));
+    });
+    req.on('error', reject);
+    req.write(body);
+    req.end();
+  });
+}
+
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
@@ -84,35 +110,25 @@ exports.handler = async (event) => {
     return { statusCode: 400, body: JSON.stringify({ error: 'Invalid request' }) };
   }
 
-  // Sanitize and limit history to last 6 messages
   const history = messages
     .filter(m => m.role === 'user' || m.role === 'assistant')
     .map(m => ({ role: m.role, content: String(m.content).slice(0, 500) }))
     .slice(-6);
 
   try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': process.env.ANTHROPIC_API_KEY,
-        'anthropic-version': '2023-06-01',
-      },
-      body: JSON.stringify({
-        model: 'claude-haiku-4-5-20251001',
-        max_tokens: 350,
-        system: SYSTEM_PROMPT,
-        messages: history,
-      }),
-    });
+    const result = await anthropicPost({
+      model: 'claude-haiku-4-5-20251001',
+      max_tokens: 350,
+      system: SYSTEM_PROMPT,
+      messages: history,
+    }, process.env.ANTHROPIC_API_KEY);
 
-    if (!res.ok) {
-      const err = await res.text();
-      console.error('Anthropic error:', err);
+    if (result.status !== 200) {
+      console.error('Anthropic error:', result.body);
       return { statusCode: 502, body: JSON.stringify({ error: 'API error' }) };
     }
 
-    const data = await res.json();
+    const data = JSON.parse(result.body);
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json' },
