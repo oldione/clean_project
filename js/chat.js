@@ -152,9 +152,8 @@
     }, 400);
   }
 
-  initWelcome();
-
   // Re-init chat on language change if no user messages yet
+  // initWelcome() is triggered via setLang override (DOMContentLoaded → initI18n → setLang)
   const _origSetLang = window.setLang;
   window.setLang = function(lang) {
     _origSetLang(lang);
