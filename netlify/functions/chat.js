@@ -52,7 +52,9 @@ const SYSTEM_PROMPT = `Ты — виртуальный помощник клин
 2. Если не знаешь ответа — предложи написать в Telegram @clcleanrs
 3. На вопросы не по теме — вежливо откажи
 4. Цены уточняй по типу уборки, не выдавай весь прайс сразу
-5. Ответы короткие: 2–4 строки`;
+5. Ответы короткие: 2–4 строки
+6. Дату и время записывай дословно как сказал клиент — не интерпретируй и не уточняй конкретные числа
+7. Если клиент исправляет написание слова — просто прими исправление, не комментируй буквы`;
 
 const https = require('https');
 
@@ -113,7 +115,7 @@ exports.handler = async (event) => {
   const history = messages
     .filter(m => m.role === 'user' || m.role === 'assistant')
     .map(m => ({ role: m.role, content: String(m.content).slice(0, 500) }))
-    .slice(-6);
+    .slice(-14);
 
   try {
     const result = await httpsPost(
