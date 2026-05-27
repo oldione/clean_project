@@ -88,10 +88,36 @@
     scrollBottom();
   }
 
-  function addTelegramBtn(url) {
+  function addBookingButtons(telegramUrl, booking) {
     const row = document.createElement('div');
-    row.className = 'cc-msg-user';
-    row.innerHTML = `<a href="${url}" target="_blank" rel="noopener" class="cc-tg-btn">📲 Отправить заявку в Telegram</a>`;
+    row.className = 'cc-booking-btns';
+    row.innerHTML = `
+      <a href="${telegramUrl}" target="_blank" rel="noopener" class="cc-tg-btn">📲 Telegram</a>
+      <button class="cc-email-btn">📧 Email</button>`;
+
+    row.querySelector('.cc-email-btn').addEventListener('click', async function () {
+      this.disabled = true;
+      this.textContent = '⏳';
+      try {
+        const res = await fetch('https://formspree.io/f/mjgzeqkw', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            name: booking?.name || '—',
+            phone: booking?.phone || '—',
+            cleaning_type: booking?.type || '—',
+            area_m2: booking?.area || '—',
+            address: booking?.address || '—',
+            datetime: booking?.datetime || '—',
+            _subject: `Заявка с сайта: ${booking?.name || '—'}`,
+          }),
+        });
+        this.textContent = res.ok ? '✅ Отправлено' : '❌ Ошибка';
+      } catch {
+        this.textContent = '❌ Ошибка';
+      }
+    });
+
     msgs.appendChild(row);
     scrollBottom();
   }
@@ -134,7 +160,7 @@
       history.push({ role: 'assistant', content: reply });
       addBotMsg(reply);
 
-      if (data.telegramUrl) addTelegramBtn(data.telegramUrl);
+      if (data.telegramUrl) addBookingButtons(data.telegramUrl, data.booking);
 
       if (msgCount >= MAX_MESSAGES) {
         showLimitNote();
