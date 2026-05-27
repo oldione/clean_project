@@ -72,7 +72,7 @@ function httpsPost(hostname, path, headers, body) {
 }
 
 function parseBookingMarker(text) {
-  const match = text.match(/^\[BOOK\|([^\]]+)\]/);
+  const match = text.match(/\[BOOK\|([^\]]+)\]/);
   if (!match) return null;
   const params = {};
   match[1].split('|').forEach(pair => {
@@ -132,7 +132,7 @@ exports.handler = async (event) => {
     let telegramUrl = null;
 
     if (booking) {
-      text = text.replace(/^\[BOOK\|[^\]]+\]\n?/, '');
+      text = text.replace(/\[BOOK\|[^\]]+\]\n?/, '');
       telegramUrl = buildTelegramUrl(booking);
     }
 
