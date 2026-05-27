@@ -33,17 +33,18 @@ const SYSTEM_PROMPT = `Ты — виртуальный помощник клин
 - Разбор личных вещей и стирка одежды
 - Удаление обширных очагов плесени
 
-## КАК ПРИНЯТЬ ЗАЯВКУ В ЧАТЕ
-Если клиент хочет оставить заявку — собери информацию по шагам:
-1. Тип уборки (базовая / генеральная / после ремонта / химчистка / мытьё окон)
+## КАК ПРИНЯТЬ ЗАЯВКУ
+Если клиент хочет оставить заявку — собери информацию по шагам (по одному вопросу за раз):
+1. Тип уборки
 2. Площадь в м²
-3. Имя клиента
-4. Номер телефона
+3. Адрес объекта
+4. Имя клиента
+5. Номер телефона
 
-Когда у тебя есть минимум имя и телефон — в самом начале своего ответа вставь маркер в точном формате (без пробелов, на одной строке):
-[BOOK|name=ИМЯ|phone=ТЕЛЕФОН|type=ТИП_УБОРКИ|area=ПЛОЩАДЬ]
+Когда собраны все 5 пунктов — в самом начале ответа вставь маркер в точном формате (одна строка):
+[BOOK|name=ИМЯ|phone=ТЕЛЕФОН|type=ТИП|area=ПЛОЩАДЬ|address=АДРЕС]
 
-После маркера напиши обычный ответ, подтверждая что заявка принята и с клиентом свяжутся в рабочее время.
+После маркера напиши короткое подтверждение: заявка оформлена, нажмите кнопку ниже чтобы отправить её нам в Telegram.
 
 ## ПРАВИЛА
 1. Не придумывай цены или условия, которых нет выше
@@ -75,25 +76,23 @@ function parseBookingMarker(text) {
   if (!match) return null;
   const params = {};
   match[1].split('|').forEach(pair => {
-    const [k, v] = pair.split('=');
-    if (k && v) params[k.trim()] = v.trim();
+    const [k, ...rest] = pair.split('=');
+    if (k && rest.length) params[k.trim()] = rest.join('=').trim();
   });
   return params;
 }
 
-async function sendToFormspree(booking) {
-  const body = JSON.stringify({
-    name: booking.name || '—',
-    phone: booking.phone || '—',
-    cleaning_type: booking.type || '—',
-    area_m2: booking.area || '—',
-    _subject: `Новая заявка через чат: ${booking.name || '—'}`,
-  });
-  try {
-    await httpsPost('formspree.io', '/f/mjgzeqkw', { Accept: 'application/json' }, body);
-  } catch (e) {
-    console.error('Formspree error:', e);
-  }
+function buildTelegramUrl(b) {
+  const msg = [
+    '🧹 Новая заявка с сайта',
+    '',
+    `Тип уборки: ${b.type || '—'}`,
+    `Площадь: ${b.area ? b.area + ' м²' : '—'}`,
+    `Адрес: ${b.address || '—'}`,
+    `Имя: ${b.name || '—'}`,
+    `Телефон: ${b.phone || '—'}`,
+  ].join('\n');
+  return 'https://t.me/clcleanrs?text=' + encodeURIComponent(msg);
 }
 
 exports.handler = async (event) => {
@@ -129,17 +128,18 @@ exports.handler = async (event) => {
     const data = JSON.parse(result.body);
     let text = data.content[0].text;
 
-    // Detect booking marker, send to Formspree, strip marker from response
     const booking = parseBookingMarker(text);
+    let telegramUrl = null;
+
     if (booking) {
       text = text.replace(/^\[BOOK\|[^\]]+\]\n?/, '');
-      await sendToFormspree(booking);
+      telegramUrl = buildTelegramUrl(booking);
     }
 
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text }),
+      body: JSON.stringify({ text, telegramUrl }),
     };
   } catch (e) {
     console.error('Function error:', e);

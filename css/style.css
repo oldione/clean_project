@@ -1173,6 +1173,16 @@ footer { background: var(--charcoal); padding: 56px 48px 36px; }
 .chat-send-btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
 .chat-send-btn svg { width: 16px; height: 16px; }
 
+.cc-tg-btn {
+  display: inline-block;
+  background: #229ed9; color: #fff;
+  padding: 10px 16px; border-radius: 18px 18px 4px 18px;
+  font-size: 0.85rem; font-weight: 600; text-decoration: none;
+  box-shadow: 0 4px 12px rgba(34,158,217,0.3);
+  transition: background 0.2s, transform 0.15s;
+}
+.cc-tg-btn:hover { background: #1a8abf; transform: scale(1.03); }
+
 @media (max-width: 480px) {
   .chat-panel { width: calc(100vw - 24px); right: 12px; bottom: 96px; }
   .chat-trigger { right: 16px; bottom: 20px; }

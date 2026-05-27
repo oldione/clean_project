@@ -88,6 +88,14 @@
     scrollBottom();
   }
 
+  function addTelegramBtn(url) {
+    const row = document.createElement('div');
+    row.className = 'cc-msg-user';
+    row.innerHTML = `<a href="${url}" target="_blank" rel="noopener" class="cc-tg-btn">📲 Отправить заявку в Telegram</a>`;
+    msgs.appendChild(row);
+    scrollBottom();
+  }
+
   function escHtml(s) {
     return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   }
@@ -125,6 +133,8 @@
 
       history.push({ role: 'assistant', content: reply });
       addBotMsg(reply);
+
+      if (data.telegramUrl) addTelegramBtn(data.telegramUrl);
 
       if (msgCount >= MAX_MESSAGES) {
         showLimitNote();
