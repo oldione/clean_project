@@ -132,15 +132,12 @@ exports.handler = async (event) => {
     const data = JSON.parse(result.body);
     let text = data.content[0].text;
 
-    console.log('RAW BOT RESPONSE:', JSON.stringify(text));
     const booking = parseBookingMarker(text);
-    console.log('Booking parsed:', JSON.stringify(booking));
     let telegramUrl = null;
 
     if (booking) {
       text = text.replace(/\[BOOK\|[^\]]+\]\n?/, '');
       telegramUrl = buildTelegramUrl(booking);
-      console.log('Telegram URL built:', telegramUrl ? 'yes' : 'no');
     }
 
     return {

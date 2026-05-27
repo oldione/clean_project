@@ -89,34 +89,22 @@
   }
 
   function addBookingButtons(telegramUrl, booking) {
+    const subject = encodeURIComponent(`Заявка с сайта: ${booking?.name || '—'}`);
+    const body = encodeURIComponent([
+      `Тип уборки: ${booking?.type || '—'}`,
+      `Площадь: ${booking?.area ? booking.area + ' м²' : '—'}`,
+      `Адрес: ${booking?.address || '—'}`,
+      `Дата/время (пожелание): ${booking?.datetime || '—'}`,
+      `Имя: ${booking?.name || '—'}`,
+      `Телефон: ${booking?.phone || '—'}`,
+    ].join('\n'));
+    const mailtoUrl = `mailto:cleancleanom.rs@gmail.com?subject=${subject}&body=${body}`;
+
     const row = document.createElement('div');
     row.className = 'cc-booking-btns';
     row.innerHTML = `
-      <a href="${telegramUrl}" target="_blank" rel="noopener" class="cc-tg-btn">📲 Telegram</a>
-      <button class="cc-email-btn">📧 Email</button>`;
-
-    row.querySelector('.cc-email-btn').addEventListener('click', async function () {
-      this.disabled = true;
-      this.textContent = '⏳';
-      try {
-        const res = await fetch('https://formspree.io/f/mjgzeqkw', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify({
-            name: booking?.name || '—',
-            phone: booking?.phone || '—',
-            cleaning_type: booking?.type || '—',
-            area_m2: booking?.area || '—',
-            address: booking?.address || '—',
-            datetime: booking?.datetime || '—',
-            _subject: `Заявка с сайта: ${booking?.name || '—'}`,
-          }),
-        });
-        this.textContent = res.ok ? '✅ Отправлено' : '❌ Ошибка';
-      } catch {
-        this.textContent = '❌ Ошибка';
-      }
-    });
+      <a href="${escAttr(telegramUrl)}" target="_blank" rel="noopener" class="cc-tg-btn">📲 Telegram</a>
+      <a href="${escAttr(mailtoUrl)}" class="cc-email-btn">📧 Email</a>`;
 
     msgs.appendChild(row);
     scrollBottom();
