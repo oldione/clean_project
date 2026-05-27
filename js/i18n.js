@@ -267,6 +267,12 @@ const translations = {
     steps_3_desc: 'Профессиональная команда со своим инвентарём и средствами. Аккуратно и точно в срок.',
     steps_4_title: 'Получаете результат',
     steps_4_desc: 'Проверяете качество и оплачиваете, когда довольны. Ваш дом — идеально чистый.',
+
+    // Chat widget
+    chat_qr_order: '🧹 Оставить заявку',
+    chat_qr_prices: '💰 Цены',
+    chat_qr_question: '❓ Задать вопрос',
+    chat_welcome: 'Здравствуйте! 👋 Помогу ответить на вопросы об уборке или оставить заявку.',
   },
 
   sr: {
@@ -520,6 +526,12 @@ const translations = {
     steps_3_desc: 'Profesionalni tim sa sopstvenim inventarom i sredstvima. Pažljivo i tačno na vreme.',
     steps_4_title: 'Primate rezultat',
     steps_4_desc: 'Proveravate kvalitet i plaćate kad ste zadovoljni. Vaš dom — savršeno čist.',
+
+    // Chat widget
+    chat_qr_order: '🧹 Pošalji upit',
+    chat_qr_prices: '💰 Cene',
+    chat_qr_question: '❓ Postavi pitanje',
+    chat_welcome: 'Zdravo! 👋 Tu sam da odgovorim na pitanja o čišćenju ili uzmem vaš upit.',
   },
 
   en: {
@@ -773,6 +785,12 @@ const translations = {
     steps_3_desc: 'Professional team with their own equipment and supplies. Careful, on time, every time.',
     steps_4_title: 'You receive the result',
     steps_4_desc: 'Check the quality and pay when satisfied. Your home — perfectly clean.',
+
+    // Chat widget
+    chat_qr_order: '🧹 Leave a request',
+    chat_qr_prices: '💰 Prices',
+    chat_qr_question: '❓ Ask a question',
+    chat_welcome: 'Hello! 👋 I can answer questions about our cleaning services or take your request.',
   }
 };
 

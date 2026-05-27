@@ -142,11 +142,23 @@
   input.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) sendUserMessage(input.value); });
 
   // ── Welcome message with quick replies ───────────────────────────────────────
-  setTimeout(() => {
-    addBotMsg('Здравствуйте! 👋 Помогу ответить на вопросы об уборке или оставить заявку.');
+  function initWelcome() {
+    msgs.innerHTML = '<div class="cc-msg-time">Сегодня</div>';
     setTimeout(() => {
-      showQuickReplies(['🧹 Оставить заявку', '💰 Цены', '❓ Задать вопрос']);
-    }, 200);
-  }, 400);
+      addBotMsg(t('chat_welcome'));
+      setTimeout(() => {
+        showQuickReplies([t('chat_qr_order'), t('chat_qr_prices'), t('chat_qr_question')]);
+      }, 200);
+    }, 400);
+  }
+
+  initWelcome();
+
+  // Re-init chat on language change if no user messages yet
+  const _origSetLang = window.setLang;
+  window.setLang = function(lang) {
+    _origSetLang(lang);
+    if (msgCount === 0) initWelcome();
+  };
 
 })();
