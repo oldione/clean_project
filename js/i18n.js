@@ -273,6 +273,9 @@ const translations = {
     chat_qr_prices: '💰 Цены',
     chat_qr_question: '❓ Задать вопрос',
     chat_welcome: 'Здравствуйте! 👋 Помогу ответить на вопросы об уборке или оставить заявку.',
+    chat_status: 'Онлайн · отвечаем за 3 мин',
+    chat_placeholder: 'Напишите сообщение...',
+    chat_today: 'Сегодня',
   },
 
   sr: {
@@ -532,6 +535,9 @@ const translations = {
     chat_qr_prices: '💰 Cene',
     chat_qr_question: '❓ Postavi pitanje',
     chat_welcome: 'Zdravo! 👋 Tu sam da odgovorim na pitanja o čišćenju ili uzmem vaš upit.',
+    chat_status: 'Online · odgovaramo za 3 min',
+    chat_placeholder: 'Napišite poruku...',
+    chat_today: 'Danas',
   },
 
   en: {
@@ -791,6 +797,9 @@ const translations = {
     chat_qr_prices: '💰 Prices',
     chat_qr_question: '❓ Ask a question',
     chat_welcome: 'Hello! 👋 I can answer questions about our cleaning services or take your request.',
+    chat_status: 'Online · reply within 3 min',
+    chat_placeholder: 'Type a message...',
+    chat_today: 'Today',
   }
 };
 

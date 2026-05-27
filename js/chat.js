@@ -143,7 +143,7 @@
 
   // ── Welcome message with quick replies ───────────────────────────────────────
   function initWelcome() {
-    msgs.innerHTML = '<div class="cc-msg-time">Сегодня</div>';
+    msgs.innerHTML = `<div class="cc-msg-time">${t('chat_today')}</div>`;
     setTimeout(() => {
       addBotMsg(t('chat_welcome'));
       setTimeout(() => {
