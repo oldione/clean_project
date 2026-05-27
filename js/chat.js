@@ -21,7 +21,7 @@
     btn.classList.toggle('cc-open', chatOpen);
     badge.classList.add('cc-hidden');
     hint.classList.add('cc-hidden');
-    if (chatOpen) { scrollBottom(); input.focus(); }
+    if (chatOpen) { scrollBottom(); if (window.innerWidth > 768) input.focus(); }
   }
 
   document.getElementById('cc-btn-wrap').addEventListener('click', toggleChat);
