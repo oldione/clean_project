@@ -35,7 +35,7 @@
   function addBotMsg(text) {
     const row = document.createElement('div');
     row.className = 'cc-msg-bot';
-    row.innerHTML = `<div class="cc-msg-bot-avatar">🌿</div><div class="cc-msg-bot-bubble">${escHtml(text)}</div>`;
+    row.innerHTML = `<div class="cc-msg-bot-avatar">🌿</div><div class="cc-msg-bot-bubble">${escHtml(text).replace(/\n/g, '<br>')}</div>`;
     msgs.appendChild(row);
     scrollBottom();
   }
