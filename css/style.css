@@ -79,26 +79,23 @@ button { font-family: inherit; cursor: pointer; }
 
 .nav-right { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
 
-.lang-pill {
-  display: flex;
-  background: var(--sand);
-  border-radius: 20px;
-  padding: 3px;
-  gap: 2px;
-}
-.lang-btn {
-  border: none; background: none; cursor: pointer;
-  font-family: var(--sans);
-  font-size: 0.72rem; font-weight: 500;
-  padding: 5px 10px;
-  border-radius: 16px;
-  color: var(--grey);
-  transition: all 0.2s;
-}
-.lang-btn.active {
+.lang-select {
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
   background: var(--white);
+  font-family: var(--sans);
+  font-size: 0.75rem; font-weight: 600;
   color: var(--charcoal);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  padding: 5px 8px;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%237a756e' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 7px center;
+  padding-right: 22px;
+  transition: border-color 0.2s;
 }
 
 .burger-btn {
@@ -1156,7 +1153,7 @@ footer { background: var(--charcoal); padding: 56px 48px 36px; }
 .chat-input {
   width: 100%; padding: 10px 14px;
   background: var(--bg); border: 1.5px solid var(--border); border-radius: 20px;
-  font-family: var(--sans); font-size: 0.85rem; color: var(--charcoal); outline: none;
+  font-family: var(--sans); font-size: 1rem; color: var(--charcoal); outline: none;
   transition: border-color 0.2s;
 }
 .chat-input:focus { border-color: var(--sage); background: #fff; }

@@ -825,10 +825,9 @@ function setLang(lang) {
   document.querySelectorAll('[data-i18n-value]').forEach(el => {
     el.value = t(el.dataset.i18nValue);
   });
-  // Update active lang button
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.lang === lang);
-  });
+  // Sync select value
+  const sel = document.getElementById('lang-select');
+  if (sel) sel.value = lang;
   // Store preference
   localStorage.setItem('cc_lang', lang);
 }

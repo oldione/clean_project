@@ -321,9 +321,8 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 // ── Language switcher ─────────────────────────────────────────────────────────
-document.querySelectorAll('.lang-btn').forEach(btn => {
-  btn.addEventListener('click', () => setLang(btn.dataset.lang));
-});
+const langSelect = document.getElementById('lang-select');
+if (langSelect) langSelect.addEventListener('change', () => setLang(langSelect.value));
 
 // ── Init ──────────────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
