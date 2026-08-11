@@ -51,7 +51,16 @@
     text-align: center;
     box-shadow: 0 10px 40px rgba(27,27,27,0.06);
   }
-  .card-logo { height: 40px; margin-bottom: 20px; }
+  .card-logo-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--charcoal);
+    border-radius: 16px;
+    padding: 14px 20px;
+    margin-bottom: 20px;
+  }
+  .card-logo { height: 64px; display: block; }
   .card h1 {
     font-family: var(--serif);
     font-weight: 400;
@@ -116,7 +125,9 @@
   </select>
 
   <div class="card">
-    <img class="card-logo" src="assets/logo.svg" alt="Clean Cleanom" />
+    <div class="card-logo-wrap">
+      <img class="card-logo" src="assets/logo.svg" alt="Clean Cleanom" />
+    </div>
     <h1 data-i18n="h">Спасибо, что заглянули!</h1>
     <p class="card-sub" data-i18n="sub">Выберите удобный способ связи</p>
 
@@ -176,49 +187,7 @@
   </div>
 </div>
 
-<script>
-  var translations = {
-    ru: {
-      h: 'Спасибо, что заглянули!',
-      sub: 'Выберите удобный способ связи',
-      site_label: 'Сайт',
-      email_label: 'Email',
-      footer: 'Clean Cleanom · Клининг в Белграде'
-    },
-    sr: {
-      h: 'Hvala što ste svratili!',
-      sub: 'Izaberite pogodan način za kontakt',
-      site_label: 'Sajt',
-      email_label: 'Email',
-      footer: 'Clean Cleanom · Čišćenje u Beogradu'
-    },
-    en: {
-      h: 'Thanks for stopping by!',
-      sub: 'Choose a way to reach us',
-      site_label: 'Website',
-      email_label: 'Email',
-      footer: 'Clean Cleanom · Cleaning in Belgrade'
-    }
-  };
-
-  function setLang(lang) {
-    var dict = translations[lang] || translations.ru;
-    document.querySelectorAll('[data-i18n]').forEach(function (el) {
-      var key = el.getAttribute('data-i18n');
-      if (dict[key]) el.textContent = dict[key];
-    });
-    document.documentElement.lang = lang;
-    localStorage.setItem('cc_lang', lang);
-    var sel = document.getElementById('lang-select');
-    if (sel) sel.value = lang;
-  }
-
-  document.getElementById('lang-select').addEventListener('change', function (e) {
-    setLang(e.target.value);
-  });
-
-  setLang(localStorage.getItem('cc_lang') || 'ru');
-</script>
+<script src="js/card.js"></script>
 
 </body>
 </html>
