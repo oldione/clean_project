@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Clean Cleanom — Контакты</title>
+<meta name="robots" content="noindex" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+
+<style>
+  :root {
+    --bg:        #f5f3ef;
+    --white:     #ffffff;
+    --charcoal:  #1b1b1b;
+    --sage:      #5a7a54;
+    --sage-lt:   #8aab84;
+    --sage-pale: #e8f0e5;
+    --rust:      #c46044;
+    --sand:      #e8e0d4;
+    --border:    #ddd8d0;
+    --grey:      #7a756e;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans:  'DM Sans', system-ui, -apple-system, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--charcoal);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 18px;
+  }
+  .card {
+    width: 100%;
+    max-width: 420px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 36px 28px 30px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(27,27,27,0.06);
+  }
+  .card-logo { height: 40px; margin-bottom: 20px; }
+  .card h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 26px;
+    margin: 0 0 6px;
+  }
+  .card-sub {
+    color: var(--grey);
+    font-size: 14.5px;
+    margin: 0 0 26px;
+  }
+  select.lang-select {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    border: 1.5px solid var(--border);
+    background: var(--white);
+    border-radius: 8px;
+    padding: 5px 8px;
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--charcoal);
+  }
+  .card-wrap { position: relative; width: 100%; max-width: 420px; }
+  .links { display: flex; flex-direction: column; gap: 12px; text-align: left; }
+  .link-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 13px 16px;
+    border: 1.5px solid var(--border);
+    border-radius: 14px;
+    text-decoration: none;
+    color: var(--charcoal);
+    transition: border-color .15s ease, background .15s ease, transform .15s ease;
+  }
+  .link-row:hover { border-color: var(--sage); background: var(--sage-pale); transform: translateY(-1px); }
+  .link-icon {
+    width: 40px; height: 40px; flex: none;
+    border-radius: 10px;
+    background: var(--sage-pale);
+    color: var(--sage);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .link-icon svg { width: 20px; height: 20px; }
+  .link-text-label { font-size: 12.5px; color: var(--grey); }
+  .link-text-val { font-size: 15px; font-weight: 500; }
+  .card-footer {
+    margin-top: 26px;
+    font-size: 12.5px;
+    color: var(--grey);
+  }
+</style>
+</head>
+<body>
+
+<div class="card-wrap">
+  <select class="lang-select" id="lang-select" aria-label="Language">
+    <option value="ru">RU</option>
+    <option value="sr">SR</option>
+    <option value="en">EN</option>
+  </select>
+
+  <div class="card">
+    <img class="card-logo" src="assets/logo.svg" alt="Clean Cleanom" />
+    <h1 data-i18n="h">Спасибо, что заглянули!</h1>
+    <p class="card-sub" data-i18n="sub">Выберите удобный способ связи</p>
+
+    <div class="links">
+      <a class="link-row" href="https://cleancleanom.rs" target="_blank" rel="noopener">
+        <span class="link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm7.93 9h-3.4a15.6 15.6 0 0 0-1.34-5.36A8.03 8.03 0 0 1 19.93 11zM12 4.06c.96 1.24 2.02 3.4 2.31 6.94H9.69c.29-3.54 1.35-5.7 2.31-6.94zM4.07 13h3.4c.14 2.05.6 3.85 1.34 5.36A8.03 8.03 0 0 1 4.07 13zm3.4-2h-3.4a8.03 8.03 0 0 1 4.74-6.36A15.6 15.6 0 0 0 7.47 11zM12 19.94c-.96-1.24-2.02-3.4-2.31-6.94h4.62c-.29 3.54-1.35 5.7-2.31 6.94zm2.66-1.58c.74-1.51 1.2-3.31 1.34-5.36h3.4a8.03 8.03 0 0 1-4.74 5.36z"/></svg>
+        </span>
+        <span>
+          <span class="link-text-label" data-i18n="site_label">Сайт</span><br />
+          <span class="link-text-val">cleancleanom.rs</span>
+        </span>
+      </a>
+
+      <a class="link-row" href="https://t.me/clcleanrs" target="_blank" rel="noopener">
+        <span class="link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </span>
+        <span>
+          <span class="link-text-label">Telegram</span><br />
+          <span class="link-text-val">@clcleanrs</span>
+        </span>
+      </a>
+
+      <a class="link-row" href="https://wa.me/381611079692" target="_blank" rel="noopener">
+        <span class="link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.62 0-3.15-.43-4.47-1.19l-.32-.19-3.15.83.84-3.07-.21-.32A7.94 7.94 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm4.38-5.85c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1-.37-1.9-1.17-.7-.63-1.18-1.4-1.31-1.64-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.47-.39-.4-.54-.41-.14-.01-.3-.01-.46-.01-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.13 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg>
+        </span>
+        <span>
+          <span class="link-text-label">WhatsApp</span><br />
+          <span class="link-text-val">+381 61 107 9692</span>
+        </span>
+      </a>
+
+      <a class="link-row" href="https://instagram.com/clean_cleanom.rs" target="_blank" rel="noopener">
+        <span class="link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </span>
+        <span>
+          <span class="link-text-label">Instagram</span><br />
+          <span class="link-text-val">@clean_cleanom.rs</span>
+        </span>
+      </a>
+
+      <a class="link-row" href="mailto:info@cleancleanom.rs">
+        <span class="link-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </span>
+        <span>
+          <span class="link-text-label" data-i18n="email_label">Email</span><br />
+          <span class="link-text-val">info@cleancleanom.rs</span>
+        </span>
+      </a>
+    </div>
+
+    <div class="card-footer" data-i18n="footer">Clean Cleanom · Клининг в Белграде</div>
+  </div>
+</div>
+
+<script>
+  var translations = {
+    ru: {
+      h: 'Спасибо, что заглянули!',
+      sub: 'Выберите удобный способ связи',
+      site_label: 'Сайт',
+      email_label: 'Email',
+      footer: 'Clean Cleanom · Клининг в Белграде'
+    },
+    sr: {
+      h: 'Hvala što ste svratili!',
+      sub: 'Izaberite pogodan način za kontakt',
+      site_label: 'Sajt',
+      email_label: 'Email',
+      footer: 'Clean Cleanom · Čišćenje u Beogradu'
+    },
+    en: {
+      h: 'Thanks for stopping by!',
+      sub: 'Choose a way to reach us',
+      site_label: 'Website',
+      email_label: 'Email',
+      footer: 'Clean Cleanom · Cleaning in Belgrade'
+    }
+  };
+
+  function setLang(lang) {
+    var dict = translations[lang] || translations.ru;
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n');
+      if (dict[key]) el.textContent = dict[key];
+    });
+    document.documentElement.lang = lang;
+    localStorage.setItem('cc_lang', lang);
+    var sel = document.getElementById('lang-select');
+    if (sel) sel.value = lang;
+  }
+
+  document.getElementById('lang-select').addEventListener('change', function (e) {
+    setLang(e.target.value);
+  });
+
+  setLang(localStorage.getItem('cc_lang') || 'ru');
+</script>
+
+</body>
+</html>
