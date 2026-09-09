@@ -784,6 +784,7 @@ button { font-family: inherit; cursor: pointer; }
 .f-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .f-group { display: flex; flex-direction: column; gap: 6px; }
 .f-label { font-size: 0.75rem; font-weight: 500; color: var(--grey); letter-spacing: 0.06em; }
+.f-label--q { font-size: 0.9rem; font-weight: 700; color: var(--charcoal); letter-spacing: 0; margin-top: 22px; margin-bottom: 8px; }
 
 .f-input, .f-select {
   width: 100%; padding: 13px 16px;
